@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  height: 100px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header.header-scrolled {
   background: rgba(1, 4, 136, 0.9);
-  height: 60px;
+  height: 120px;
 }
 #header .logo h1 {
   font-size: 28px;
@@ -140,9 +140,11 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 #header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
+  padding-top:  10px;
+  margin-top:  4px;
+  max-height: 130px;
+  width: 15vh;
+  height:15vh;
 }
 
 /*--------------------------------------------------------------
@@ -684,7 +686,7 @@ section {
   font-size: 14px;
 }
 .about .video-box {
-  background: url("../img/about.png") center center no-repeat;
+  
   background-size: contain;
   min-height: 300px;
 }

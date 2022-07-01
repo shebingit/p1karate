@@ -20,3 +20,15 @@ from django.http import JsonResponse
 
 def index_load(request):
     return render(request,'index.html')
+
+def load_member(request):
+    return render(request,'assmembers.html')
+
+def load_affiliation(request):
+    return render(request, 'affiliation.html')
+
+def load_kata(request):
+    return render(request,'kata.html')
+
+def preload(request):
+    return render(request,'preload.html')
