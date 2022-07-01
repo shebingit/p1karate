@@ -2,232 +2,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Bootslander Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <style>
-    html {
-        background: url("static/img/sea.webp") center center no-repeat;
-        background-size: cover;
-        overflow: hidden;
-
-      }
-      
-      .container,
-      .sea,
-      .sky,
-      .sun,
-      .light {
-        position: relative;
-      }
-      
-      .container {
-        width: 100%;
-        height: 500px;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        margin-left: -50%;
-        margin-top: -100px;
-      }
-      
-    
-      .sun {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-       margin-top: 30px;
-        left: 45%;
-        z-index: 5;
-        background: linear-gradient(#ff0, rgb(221, 184, 0));
-        box-shadow: 0 0 40px 6px rgb(218, 57, 32), 0 0 150px 10px rgb(239, 219, 219);
-        animation: rise 20s ease forwards;
-      }
-      
-      @keyframes rise {
-        0% {
-          top: 90%;
-        }
-        100% {
-          top: 15%;
-        }
-      }
-      
-      .light {
-        opacity: .5;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(at 50% 0%, #ff0, transparent);
-        z-index: 40;
-        animation: over 10s ease forwards;
-      }
-      
-      @keyframes over {
-        0% {
-          opacity: 0
-        }
-        ;
-        100% {
-          opacity: .2
-        }
-        ;
-      }
-      
-   
-      @keyframes swim {
-        0% {
-          left: 100%;
-        }
-        100% {
-          left: -25%
-        }
-        ;
-      }
-      
-      @keyframes move {
-        0% {
-          left: 0px;
-        }
-        100% {
-          left: 100%;
-        }
-      }
-      
-      @keyframes mover {
-        0% {
-          left: -0px;
-        }
-        100% {
-          left: 100%;
-        }
-      }
-      
-      @keyframes flap {
-        0% {
-          border-radius: 90%;
-        }
-        100% {
-          border-radius: 10%;
-        }
-      }
-      .hero-waves {
-        display:block;
-        margin-top:250px;
-        width: 100%;
-        height: 240px;
-        z-index:10;
-        position: absolute;
-      }
-      
-      .wave1 use {
-        -webkit-animation: move-forever1 10s linear infinite;
-        animation: move-forever1 10s linear infinite;
-        -webkit-animation-delay: -2s;
-        animation-delay: -2s;
-      }
-      
-      .wave2 use {
-        -webkit-animation: move-forever2 8s linear infinite;
-        animation: move-forever2 8s linear infinite;
-        -webkit-animation-delay: -2s;
-        animation-delay: -2s;
-      }
-      
-      .wave3 use {
-        -webkit-animation: move-forever3 6s linear infinite;
-        animation: move-forever3 6s linear infinite;
-        -webkit-animation-delay: -2s;
-        animation-delay: -2s;
-      }
-      .wave4 use {
-        -webkit-animation: move-forever3 6s linear infinite;
-        animation: move-forever4 4s linear infinite;
-        -webkit-animation-delay: -2s;
-        animation-delay: -2s;
-      }
-      
-      @-webkit-keyframes move-forever1 {
-        0% {
-          transform: translate(85px, 0%);
-        }
-        100% {
-          transform: translate(-90px, 0%);
-        }
-      }
-      
-      @keyframes move-forever1 {
-        0% {
-          transform: translate(85px, 0%);
-        }
-        100% {
-          transform: translate(-90px, 0%);
-        }
-      }
-      @-webkit-keyframes move-forever2 {
-        0% {
-          transform: translate(-90px, 0%);
-        }
-        100% {
-          transform: translate(85px, 0%);
-        }
-      }
-      @keyframes move-forever2 {
-        0% {
-          transform: translate(-90px, 0%);
-        }
-        100% {
-          transform: translate(85px, 0%);
-        }
-      }
-      @-webkit-keyframes move-forever3 {
-        0% {
-          transform: translate(-90px, 0%);
-        }
-        100% {
-          transform: translate(85px, 0%);
-        }
-      }
-      @keyframes move-forever3 {
-        0% {
-          transform: translate(-90px, 0%);
-        }
-        100% {
-          transform: translate(85px, 0%);
-        }
-      }
-  </style>
-</head>
-<body>
-    <div class="container">
-        <div class="sky"></div>
-        <div class="sea">
-        <div class="light"></div></div>
-      
-        <div class="sun"></div>
-        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-            <defs>
-              <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-            </defs>
-            <g class="wave1">
-              <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255,1)">
-            </g>
-            <g class="wave2">
-              <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255,1)">
-            </g>
-            <g class="wave3">
-              <use xlink:href="#wave-path" x="40" y="4"  fill="#fff">
-            </g>
-            <g class="wave4">
-                <use xlink:href="#wave-path" x="40" y="8" fill="rgba(255,255,255,1)">
-              </g>
-          </svg>
-        
-      </div>
-</body>
-</html>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Vertical Timeline Heading</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="{% static 'css/preload.css' %}" rel="stylesheet">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+  
+      <div>
+          <div class="container">
+            <h2 class="pb-5 pt-5 text-center mb-5 display-5">Vertical Timeline Heading</h2>
+            <!-- First Content Section-->
+            <div class="row align-items-center connecting-lines d-flex">
+              <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+                <div class="circle font-weight-bold"><i class="fa fa-check"></i></div>
+              </div>
+              <div class="col-6">
+                <h4>First Step</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mollis enim eu erat lacinia pharetra a et mi. Vivamus tincidunt lorem non semper commodo.</p>
+              </div>
+            </div>
+            <!-- Path Line -->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner top-right"></div>
+              </div>
+              <div class="col-8">
+                <hr/>
+              </div>
+              <div class="col-2">
+                <div class="corner left-bottom"></div>
+              </div>
+            </div>
+            <!-- Second Content Section-->
+            <div class="row align-items-center justify-content-end connecting-lines d-flex">
+              <div class="col-6 text-right">
+                <h4>Second Step</h4>
+                <p>Pellentesque vehicula urna et sollicitudin tempus. Suspendisse pretium neque id scelerisque semper. Mauris sem metus, rutrum at fermentum vitae, tincidunt a mi. Vestibulum scelerisque lacinia nunc quis iaculis. Proin pellentesque odio dolor, in placerat ex vestibulum eget. Integer sit amet feugiat dolor. Proin convallis viverra erat at euismod.</p>
+              </div>
+              <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+                <div class="circle font-weight-bold"><i class="fa fa-check"></i></div>
+              </div>
+            </div>
+            <!-- Path Line -->
+            <div class="row timeline">
+              <div class="col-2">
+                <div class="corner right-bottom"></div>
+              </div>
+              <div class="col-8">
+                <hr/>
+              </div>
+              <div class="col-2">
+                <div class="corner top-left"></div>
+              </div>
+            </div>
+            <!-- Third Content Section -->
+            <div class="row align-items-center connecting-lines d-flex">
+              <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+                <div class="circle font-weight-bold"><i class="fa fa-check"></i></div>
+              </div>
+              <div class="col-6">
+                <h4>Third Step</h4>
+                <p>Aenean in fermentum ante. Praesent tempus lectus sed consectetur rutrum. Nulla imperdiet semper sollicitudin. Quisque consectetur nulla id magna efficitur sodales. Etiam dapibus metus diam, malesuada cursus ligula dapibus non. Duis pellentesque hendrerit orci id congue.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </body>
+  </html>

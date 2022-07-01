@@ -18,6 +18,14 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="{% static 'css/historline.css' %}" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
   <!-- Vendor CSS Files -->
   <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -109,8 +117,8 @@
       <div class="row justify-content-between">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1><span>KARATE</span></h1>
-            <h2>BE KARATE THE WAY OF LIFE</h2>
+            <h1>Goju Ryu Okinawa Karate Do Association<span></span></h1>
+            <h2>Be Karate The Way Of Life</h2>
             <div class="text-center text-lg-start">
               <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
@@ -155,36 +163,66 @@
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 " data-aos="fade-left">
             <h3>About Us & Our Masters </h3>
-            <p>JKMO INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas. Shihan Dr. Shaji S. Kottaram (World Karate Federation Judge and Asian Karate Federation Judge ‘A‘ in Kata & Kumite) is the President & Chief Technical Director of JKMO INDIA. Black Belt Karate International (BBKI INDIA SHOTOKAN) was established in India by Shihan Bonnie Roberts from Sri Lanka in 1975. In 2000 we invited Shihan Sasaki Toshiatsu to India and BBKI INDIA was renamed as JKMO INDIA.</p>
+            <p>JKMO INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas.</p>
             <div class="container">
-              <div class="row row-cols-4">
-                <div class="col"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="height:10vh;width:10vh;border-radius:50%;"></div>
-                <div class="col" style="border: 1px soid #000 ;"></div>
-                <div class="col"></div>
+              <h2 class="pb-3 pt-3 text-center mb-3 display-5"></h2>
+              <!-- First Content Section-->
+              <div class="row align-items-center connecting-lines d-flex">
+                <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold"><a href="{% url 'load_kata' %}"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></a></div>
+                </div>
+                <div class="col-6">
+                  <h4>Funakoshi Gichin</h4>
+                  <p>Founder</p>
+                </div>
               </div>
+              <!-- Path Line -->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner left-bottom"></div>
+                </div>
               </div>
-              <div class="row row-cols-4">
-                <div class="col"></div>
-                <div class="col"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="height:10vh;width:10vh;border-radius:50%;"></div>
-                <div class="col"></div>
-                <div class="col"></div>
+              <!-- Second Content Section-->
+              <div class="row align-items-center justify-content-end connecting-lines d-flex">
+                <div class="col-6 text-right">
+                  <h4>Second Step</h4>
+                  <p>Pellentesque vehicula urna et sollicitudin tempus. </p>
+                </div>
+                <div class="col-2 text-center full d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h2.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></div>
+                </div>
               </div>
-              <div class="row row-cols-4">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="height:10vh;width:10vh;border-radius:50%;"></div>
-                <div class="col"></div>
+              <!-- Path Line -->
+              <div class="row timeline">
+                <div class="col-2">
+                  <div class="corner right-bottom"></div>
+                </div>
+                <div class="col-8">
+                  <hr/>
+                </div>
+                <div class="col-2">
+                  <div class="corner top-left"></div>
+                </div>
               </div>
-              <div class="row row-cols-4">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="height:10vh;width:10vh;border-radius:50%;"></div>
+              <!-- Third Content Section -->
+              <div class="row align-items-center connecting-lines d-flex">
+                <div class="col-2 text-center top d-inline-flex justify-content-center align-items-center">
+                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h4.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></i></div>
+                </div>
+                <div class="col-6">
+                  <h4>Third Step</h4>
+                  <p>Master </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 
@@ -201,129 +239,75 @@
           <div class="col-lg-3 col-md-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Heian Shodan</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Gekisai dai-ichi </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Heian Nidan</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Gekisai dai-ni </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Heian Sandan</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Saifa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Heian Yondan	</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Seiyunchin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Heian Godan	</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Shisochin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Tekki Shodan</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Sanseru </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Tekki Nidan</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Sepai </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}"> Tekki Sandan	</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Kururunfa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="450">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Gankaku	</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Sesan	</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Hangetsu</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Suparunpei </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Kanku Sho</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Sanchin </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="600">
               <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Jitte</a></h3>
+              <h3><a href="{% url 'load_kata' %}">Tensho </a></h3>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Chinte</a></h3>
-            </div>
-          </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Sochin</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Meikyo</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Jiin</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Gojushiho Dai</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Gojushiho Sho</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Nijushiho</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Wankan</a></h3>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 mt-4">
-              <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-                <i class="ri-anchor-line" style="color: #b2904f;"></i>
-                <h3><a href="{% url 'load_kata' %}">Unsu</a></h3>
-              </div>
-            </div>
                
         </div>
 
