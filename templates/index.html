@@ -45,6 +45,45 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
+    #event_name{
+      margin:5px;
+      text-align: center;
+      margin-bottom:4vh;
+      margin-top: 2vh;
+      font-size: 14px;
+     
+    }
+    #event_name h5{
+      text-decoration: none;
+      color: #000;
+    }
+    #morebtn{
+      width: 100%;
+      text-align: center;
+      
+    }
+    #morebtn button a{
+      color: #fff;
+      font-weight: 400;
+      opacity: 1px;
+    }
+    #morebtn  a:hover{
+      opacity: 0.6 px;
+    }
+    
+    
+    #morebtn button{
+      background: #1acc8d;
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    border: none;
+    color: #fff;
+    }
+    #event_name:hover  {
+      transform: scale(1.1);
+    }
     .video-container {
       overflow: hidden;
       position: relative;
@@ -58,15 +97,15 @@
       content: '';
   }
   
-  .video-container iframe {
+  .video-container video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 60%;
+      height: 100%;
   }
   @media(max-width:992px){
-    .video-container iframe {
+    .video-container video {
      
       height: 100%; 
       background-size:contain;
@@ -119,13 +158,11 @@
           <div data-aos="zoom-out">
             <h1>Goju Ryu Okinawa Karate Do Association<span></span></h1>
             <h2>Be Karate The Way Of Life</h2>
-            <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            </div>
+            
           </div>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="{% static 'img/hero-img1.jpg' %}" class="img-fluid animated" alt="" style="border-radius:40%;">
+          <img src="{% static 'img/logo1.png' %}" class="img-fluid animated" alt="" style="border-radius:40%;">
         </div>
       </div>
     </div>
@@ -156,7 +193,10 @@
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
             <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <video  autoplay muted>
+                <source src="static/img/video.mp4" type="video/mp4">
+                
+              </video>
             </div>
             
           </div>
@@ -164,108 +204,7 @@
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 " data-aos="fade-left">
             <h3>About Us & Our Masters </h3>
             <p>JKMO INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas.</p>
-            <div class="container">
-              <h2 class="pb-3 pt-3 text-center mb-3 display-5"></h2>
-              <!-- First Content Section-->
-              <div class="row align-items-center connecting-lines d-flex">
-                <div class="col-sm-2 col-5 text-center bottom d-inline-flex justify-content-center align-items-center">
-                  <div class="circle font-weight-bold"><a href="{% url 'load_kata' %}"><img src="{% static 'img/team/m1.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></a></div>
-                </div>
-                <div class="col-6">
-                  <h4>Funakoshi Gichin</h4>
-                  <p>Founder</p>
-                </div>
-              </div>
-              <!-- Path Line -->
-              <div class="row timeline">
-                <div class="col-2">
-                  <div class="corner top-right"></div>
-                </div>
-                <div class="col-8">
-                  <hr/>
-                </div>
-                <div class="col-2">
-                  <div class="corner left-bottom"></div>
-                </div>
-              </div>
-              <!-- Second Content Section-->
-              <div class="row align-items-center justify-content-end connecting-lines d-flex">
-                <div class="col-6 text-right">
-                  <h4>Second Step</h4>
-                  <p>Pellentesque vehicula urna et sollicitudin tempus. </p>
-                </div>
-                <div class="col-sm-2 col-5 text-center full d-inline-flex justify-content-center align-items-center">
-                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h2.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></div>
-                </div>
-              </div>
-              <!-- Path Line -->
-              <div class="row timeline">
-                <div class="col-2">
-                  <div class="corner right-bottom"></div>
-                </div>
-                <div class="col-8">
-                  <hr/>
-                </div>
-                <div class="col-2">
-                  <div class="corner top-left"></div>
-                </div>
-              </div>
-              <!-- Third Content Section -->
-              <div class="row align-items-center connecting-lines d-flex">
-                <div class="col-sm-2 col-5 text-center top d-inline-flex justify-content-center align-items-center">
-                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h3.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></i></div>
-                </div>
-                <div class="col-6">
-                  <h4>Third Step</h4>
-                  <p>Master </p>
-                </div>
-              </div>
-              <!-- Path Line -->
-              <div class="row timeline">
-                <div class="col-2">
-                  <div class="corner top-right"></div>
-                </div>
-                <div class="col-8">
-                  <hr/>
-                </div>
-                <div class="col-2">
-                  <div class="corner left-bottom"></div>
-                </div>
-              </div>
-              <!-- four Content Section -->
-              <div class="row align-items-center justify-content-end connecting-lines d-flex">
-                <div class="col-6 text-right">
-                  <h4>Second Step</h4>
-                  <p>Pellentesque vehicula urna et sollicitudin tempus. </p>
-                </div>
-                <div class="col-sm-2 col-5 text-center full d-inline-flex justify-content-center align-items-center">
-                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h2.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></div>
-                </div>
-              </div>
-              <!-- Path Line -->
-              <div class="row timeline">
-                <div class="col-2">
-                  <div class="corner right-bottom"></div>
-                </div>
-                <div class="col-8">
-                  <hr/>
-                </div>
-                <div class="col-2">
-                  <div class="corner top-left"></div>
-                </div>
-              </div>
-              
-              <!-- five Content Section -->
-              <div class="row align-items-center connecting-lines d-flex">
-                <div class="col-sm-2 col-5 text-center top d-inline-flex justify-content-center align-items-center">
-                  <div class="circle font-weight-bold"><img src="{% static 'img/team/h4.jpg' %}" class="img-fluid" alt="" style="border-radius:50%;"></i></div>
-                </div>
-                <div class="col-6">
-                  <h4>Third Step</h4>
-                  <p>Master </p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -283,74 +222,75 @@
         <div class="row" data-aos="fade-left">
           <div class="col-lg-3 col-md-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Gekisai dai-ichi </a></h3>
+              <a href="{% url 'load_kata' %}" > <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x"></a>
+              <h3><a href="{% url 'load_kata' %}"style="color: #000;">Gekisai dai-ichi </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Gekisai dai-ni </a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/KURURUNFA.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Gekisai dai-ni </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Saifa</a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Saifa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Seiyunchin</a></h3>
+              <a href="{% url 'load_kata' %}"> <img src=http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SUPARINPEI.gif
+                " alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Seiyunchin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Shisochin</a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Shisochin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Sanseru </a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SANSERU.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sanseru </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Sepai </a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEIPAI.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sepai </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Kururunfa</a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Kururunfa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="450">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Sesan	</a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEISAN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sesan	</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Suparunpei </a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEIYUCHIN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Suparunpei </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Sanchin </a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sanchin </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="600">
-              <i class="ri-anchor-line" style="color: #b2904f;"></i>
-              <h3><a href="{% url 'load_kata' %}">Tensho </a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SHISOCHIN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Tensho </a></h3>
             </div>
           </div>
                
@@ -359,49 +299,7 @@
       </div>
     </section><!-- End Features Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container">
-
-        <div class="row" data-aos="fade-up">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-person"></i>
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Masters</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Instructors</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-bezier"></i>
-              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
-              <p>BlackBets</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Our Students</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
+    
     <!-- ======= Details Section 
     <section id="details" class="details">
       <div class="container">
@@ -502,7 +400,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Gallery</h2>
-          <p>Check our Gallery</p>
+          <p> Events Gallery</p>
         </div>
 
         <div class="row no-gutters" data-aos="fade-left">
@@ -511,6 +409,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
               <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -519,6 +420,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
               <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -527,6 +431,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
               <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -535,6 +442,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
               <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -543,6 +453,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
               <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -551,6 +464,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
               <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -559,6 +475,9 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
               <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
@@ -567,12 +486,18 @@
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
               <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
                 <img src="{% static 'img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
+                <div id="event_name">
+                  <h5>Event Name</h5>
+                </div>
               </a>
             </div>
           </div>
 
         </div>
-
+        <div id="morebtn">
+         <button type="button"><a href="#">More Events</a></button> 
+        </div>
+        
       </div>
     </section><!-- End Gallery Section -->
 
@@ -688,13 +613,9 @@
 
           
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
+          <div class="col-lg-6 col-md-6 col-sm-4 footer-newsletter">
+            <h4>Location</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4013544.1192986723!2d76.04381101336442!3d10.774756217123121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0x559475cc463361f0!2sTamil%20Nadu!5e0!3m2!1sen!2sin!4v1657076370603!5m2!1sen!2sin" width="570" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
         </div>
@@ -725,7 +646,7 @@
   <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
   <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
   <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
-
+  
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
   <script src="{% static 'js/timeline.js' %}"></script>

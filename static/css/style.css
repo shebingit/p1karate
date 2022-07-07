@@ -1480,4 +1480,7 @@ section {
   #footer .footer-top .footer-info {
     margin: -20px 0 30px 0;
   }
+  #footer iframe{
+    width: 335px;
+  }
 }
