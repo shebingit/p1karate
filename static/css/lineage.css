@@ -1,0 +1,139 @@
+
+
+#about .tree{
+    width:100%;
+    height: auto;
+    text-align: left;
+    
+}
+
+#about .tree ul{
+    padding-top: 20px;
+    position: relative;
+    transition: .5s;
+}
+#about .tree li{
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    transition: .5s;
+}
+#about .tree li:before, .tree li:after{
+    content: "";
+    position: absolute;
+    top:0;
+    right:50%;
+    border-top:1px solid #ccc;
+    width:51%;
+    height: 10px;
+}
+@media(max-width:921px){
+    #about .tree li{
+        display: inline-table;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        padding: 3px;
+        transition: .5s;
+    }
+    #about .tree li:before, .tree li:after{
+        content: "";
+        position: absolute;
+        top:0;
+        right:1%;
+        border-top:1px solid #ccc;
+        width:100%;
+        height: 10px;
+    }
+}
+#about .tree li:after{
+    right:auto;
+    left:50%;
+    border-left: 1px solid #ccc;
+}
+@media(max-width)
+{
+    #about .tree li:after{
+        right:auto;
+        left:2%;
+        border-left: 1px solid #ccc;
+    }
+}
+#about .tree li:only-child:after, .tree li:only-child:before{
+    display: none;
+    
+}
+#about .tree li:only-child{
+    padding-top: 0;
+}
+#about .tree li:first-child:before, .tree li:last-child:after{
+    border: none;
+}
+#about .tree li:last-child:before{
+    border-right: 1px solid #ccc;
+    border-radius: 0px 5px 0px opx;
+}
+#about .tree li:last-child:after{
+    border-radius: 5px 0px 0px opx;
+}
+#about .tree ul ul:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:50%;
+    border-left:1px solid #ccc;
+    width:0;
+    height: 20px;
+}
+@media(max-width:921px){
+    #about .tree ul ul:after{
+        content: "";
+        position: absolute;
+        top:0;
+        left:3px;
+        border-left:1px solid #ccc;
+        width:0;
+        height: 5px;
+    }
+}
+#about .tree a{
+    border:1px soid #ccc;
+    padding: 10px;
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration-line:none ;
+    border-radius: 5px;
+    transition: .5s;
+}
+#about .tree a img{
+    width:16vh;
+    height:17vh;
+    margin-bottom: 10px !important;
+    border-radius: 20px;
+    margin: auto;
+
+}
+@media(max-width:540px)
+{
+    #about .tree a img{
+        width:10vh;
+        height:12vh;
+        margin-bottom: 10px !important;
+        border-radius: 20px;
+        margin: auto;
+    
+    }
+}
+#about .tree span{
+    border:none;
+    border-radius: 5px;
+    color: #666;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400px;
+}
+

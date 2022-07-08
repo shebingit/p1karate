@@ -35,6 +35,47 @@
     * Author: BootstrapMade.com
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
+    <style>
+      .inner-page .video-container {
+        overflow: hidden;
+        position: relative;
+        width:100%;
+        margin-top: 10vh;
+        height: 600px;;
+    }
+    
+    .inner-page .video-container::after {
+        padding-top: 50.25%;
+        display: block;
+        content: '';
+    }
+    iframe{
+      width:100%;
+      height:600px;
+
+    }
+    
+    .inner-page .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px;
+    }
+    @media(max-width:992px){
+      .inner-page .video-container video {
+       
+        height: 200px;
+        background-size:contain;
+      
+    }
+    .inner-page  iframe {
+    
+      background-size: contain;
+      min-height: 200px;
+    }
+  }
+    </style>
   </head>
   
   <body>
@@ -77,8 +118,9 @@
           <div class="d-flex justify-content-between align-items-center">
             <h2>KATA</h2>   
           </div>
-          <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:107px;height:161px;object-fit:cover" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x">
-  
+          <center>
+            <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:107px;height:161px;object-fit:cover" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x">
+          </center>
         </div>
       </section><!-- End Breadcrumbs Section -->
   
@@ -95,7 +137,7 @@
       <section class="inner-page">
         <div class="container">
           <div class="d-flex justify-content-between align-items-center">
-            <h2>KATA NAME</h2>   
+            <h2>Gekisai dai-ichi</h2>   
           </div>
           <br>
           <p>Kata is often described as a set sequence of karate moves organized into a pre-arranged fight against imaginary opponents. The kata consists of kicks, punches, sweeps, strikes, blocks, and throws. Body movement in various kata includes stepping, twisting, turning, dropping to the ground, and jumping. In Shotokan, kata is not a performance or a demonstration, but is for individual karateka to practice full techniques—with every technique potentially a killing blow; while paying particular attention to form and timing (rhythm).
@@ -103,9 +145,10 @@
             The kiai or "spirit cry" as it is sometimes referred to, occurs only at certain pre-determined moments in each kata. It is precisely at these pre-determined moments that the karate-ka is required to demonstrate a total commitment of body, mind, and spirit, and to channel all of their available energy and apply it appropriately to the required technique. The kiai is a common thread that runs through all major styles of karate.
           </p><br>
           <div class="row">
-            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+            <div class="col-xl-12 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                  <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
               </div>
             </div>
           </div>

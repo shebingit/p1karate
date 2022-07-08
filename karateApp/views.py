@@ -16,6 +16,11 @@ from django.http import JsonResponse
 
 #======= loading Sections=====
 
+# admin page
+
+def load_AdminDashboard(request):
+    return render(request,'DashBoard.html')
+
 # index page
 
 def index_load(request):
@@ -29,6 +34,9 @@ def load_affiliation(request):
 
 def load_kata(request):
     return render(request,'kata.html')
+
+def MoreEvent(request):
+    return render(request,'MoreEvents.html')
 
 def preload(request):
     return render(request,'preload.html')
