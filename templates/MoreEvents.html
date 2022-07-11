@@ -59,7 +59,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about">About</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
           <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
@@ -80,98 +80,35 @@
     
                 <div class="row" style="width:100%;color:#000;">
                     <div class="col-xl-12 col-lg-12 col-sm-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 " data-aos="fade-left">
-                        <h3>Our Events</h3>
+                        <h3 class="text-center">Our Events</h3>
                     </div>
                 </div>
                 <div class="container">
                 <div class="row no-gutters" data-aos="fade-left">
-                    <div class="col-lg-1 col-md-4 p-1" data-aos="fade-left">
-                        <a href="{% url 'MoreEvent' %}"><h6>Our Events</h6></a>
+                  {% for folder in folders %}
+                    <div class="col-lg-3 col-md-2 col-lg-1 p-1" data-aos="fade-left">
+                        <a href="{% url 'MoreEvent' folder.id %}"><ion-icon name="caret-down-outline"></ion-icon><h6>{{folder.folder_name}}</h6></a>
                     </div>
-                    <div class="col-lg-1 col-md-4 p-1" data-aos="fade-left">
-                        <a href="{% url 'MoreEvent' %}"><h6>Our Events</h6></a>
-                    </div>
-                    <div class="col-lg-1 col-md-4 p-1" data-aos="fade-left">
-                        <a href="{% url 'MoreEvent' %}"><h6>Our Events</h6></a>
-                    </div>
-                    <div class="col-lg-1 col-md-4 p-1" data-aos="fade-left">
-                        <a href="{% url 'MoreEvent' %}"><h6>Our Events</h6></a>
-                    </div>
-                    <div class="col-lg-1 col-md-4 p-1" data-aos="fade-left">
-                        <a href="{% url 'MoreEvent' %}"><h6>Our Events</h6></a>
-                    </div>
-                    <div class="col-lg-1 col-md-4 p-1" data-aos="fade-left">
-                        <a href="{% url 'MoreEvent' %}"><h6>Our Events</h6></a>
-                    </div>
+                  {% endfor %}
                 </div>   
                 </div>
                 <br><br>
-                <div class="container">
+               
+                <div class="container mt-3">
                     <div class="row no-gutters" data-aos="fade-left">
+                      {% for img in images %}
 
                         <div class="col-lg-3 col-md-4 p-1">
                           <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                            <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">                            
+                            <a href="#" class="gallery-lightbox">
+                            {% if img.image_url %}
+                              <img src="{{img.image_url.url}}" alt="" class="img-fluid"> 
+                            {% endif %}                           
                             </a>
                           </div>
                         </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-                            <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">                              
-                            </a>
-                          </div>
-                        </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                            <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
-                            </a>
-                          </div>
-                        </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-                            <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
-                            </a>
-                          </div>
-                        </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                            <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
-                            </a>
-                          </div>
-                        </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-                            <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
-                            </a>
-                          </div>
-                        </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                            <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
-                            </a>
-                          </div>
-                        </div>
-              
-                        <div class="col-lg-3 col-md-4 p-1">
-                          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-                            <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
-                              <img src="{% static 'img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
-                            </a>
-                          </div>
-                        </div>
+                      {% endfor%}
+                        
                     </div>
                 </div>
                 <br><br>
@@ -256,6 +193,8 @@
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
   <script src="{% static 'js/timeline.js' %}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

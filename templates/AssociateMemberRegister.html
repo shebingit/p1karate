@@ -36,6 +36,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+  <link href="{% static 'css/AssociateMemberRegister.css' %}" rel="stylesheet">
 </head>
 <body>
 <!-- ======= Header ======= -->
@@ -51,7 +52,7 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link scrollto active" href="{% url 'load_AdminDashboard' %}#hero">Admin DashBord</a></li>
-        <li><a class="nav-link scrollto" href="{% url 'index_load' %}">Logout</a></li>
+        <li><a class="nav-link scrollto" href="#about">Logout</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -59,73 +60,55 @@
   </div>
 </header><!-- End Header -->
 
-<section id="admin_hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-8 col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Gallery</h5>
-            <a href="{% url 'admin_gallery_add' %}" class="btn btn-primary">Go to Next</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-8  col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Associate Members</h5>
-            <a href="{% url 'Assmember_Register' %}" class="btn btn-primary center">Go to Next</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-8  col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Contents</h5>
-            <a href="#" class="btn btn-primary center">Go to Next</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-8 col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Affiliation</h5>
-            <a href="{% url 'admin_affiliation_load' %}" class="btn btn-primary center">Go to Next</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!--Container Main start-->
+    <section id="register">
+      <div class="wrapper">
+        <img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid" style="width:9vh;height:9vh;"><br>
+                  <h2>Registration</h2>
+                  <form action="{% url 'associate_members_add' %}" method="post" enctype="multipart/form-data">
+                    <div class="input-box">
+                      <input type="text"  name="ass_name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                      <input type="text" name="ass_no" placeholder="Enter your contact no" required>
+                    </div>
+                    <div class="input-box">
+                      <input type="email" name="ass_email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <input type="text" name="ass_position" placeholder="Position" required>
+                    </div>
+                    <div class="input-box">
+                      <input type="file" accept="image/associates" placeholder="photo" class="p-2" id="file" name="imgs" onchange="previewImage();" required>
+                    </div>
+                    <div class="input-box">
+                      <img id="preview" class="img-fluid" style="width:15vh; height:15vh;">
+                    </div><br><br>
+                    <div class="input-box button my-2">
+                      <button type="Submit" class="btn">Register</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
 
-</section><!-- End Hero -->
-
-<section id="admin_table">
-  <div class="container">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Event Name</th>
-          <th scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for folder in folders %}
-        <tr>
-          <td><ion-icon name="folder-outline"class="fs-3 mx-2"></ion-icon><a href="{% url 'admin_event_gallery' folder.id %}">{{folder.folder_name}}</a></td>
-          <td>
-            <a href="#"><ion-icon name="trash-outline" class="fs-3 text-danger mx-2"></ion-icon></a>
-          </td>
-        </tr>
-        {% endfor %}
-
-      </tbody>
-    </table>
-  </div>
-</section>
-
- <!-- Template Main JS File -->
+            <script>
+              function previewImage(){
+                  var file=document.getElementById("file").files;
+                  if (file.length > 0){
+                      var fileReader= new FileReader();
+                          fileReader.onload = function (event){
+                              document.getElementById("preview").setAttribute("src",event.target.result);
+                          };
+                      fileReader.readAsDataURL(file[0]);
+                  }
+              }
+          </script>
+         
+  <!-- Template Main JS File -->
  <script src="{% static 'js/main.js' %}"></script>
  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

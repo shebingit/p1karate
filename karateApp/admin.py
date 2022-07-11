@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+admin.site.register(associate_members)
+admin.site.register(galleryfolder)
+admin.site.register(gallery)
+admin.site.register(affiliation)

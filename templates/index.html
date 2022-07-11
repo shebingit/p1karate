@@ -73,17 +73,78 @@
     
     
     #morebtn button{
-      background: #1acc8d;
-    width: 140px;
-    height: 40px;
-    border-radius: 50px;
-    transition: all 0.4s;
-    border: none;
-    color: #fff;
+      background: 	#6cb0d0;
+      width: 140px;
+      height: 40px;
+      border-radius: 50px;
+      transition: all 0.4s;
+      border: none;
+      color: #fff;
     }
     #event_name:hover  {
       transform: scale(1.1);
     }
+
+  /* Person */
+.person {
+	border: 1px solid black;
+	padding: 10px;
+	min-width: 150px;
+	background-color: #FFFFFF;
+	display: inline-block;
+}
+
+.person.female {
+	border-color: #F45B69;
+}
+
+.person.male {
+	border-color: #456990;
+}
+
+.person div {
+	text-align: center;
+}
+
+.person .name {
+	font-size: 16px;
+}
+
+.person .parentDrop, .person .spouseDrop, .person .childDrop {
+	border: 1px dashed #000000;
+	width: auto;
+	min-width: 80px;
+	min-height: 80px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding-top: 15px;
+}
+
+.person .parentDrop>span,
+.person .spouseDrop>span,
+.person .childDrop>span {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	font-weight: bold;
+}
+.parentDrop>.person,
+.spouseDrop>.person,
+.childDrop>.person {
+	margin-top: 20px;
+}
+#about video{
+  margin-top:8vh;
+}
+@media(max-width:921px)
+{
+  #about video{
+    margin-top:0vh;
+  }
+}
+
+
     
   </style>
 </head>
@@ -109,7 +170,7 @@
           <li><a class="nav-link scrollto" href="#features">Katas</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="{%url 'load_AdminDashboard' %}">Admin</a></li>
+          <li><a class="nav-link scrollto" href="{%url 'load_admin_dashbord_login' %}">Admin</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -161,32 +222,37 @@
         <div class="row" style="width:100%;color:#000;">
           <div class="col-lg-12 col-lg-12 col-sm-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 m-2 " data-aos="fade-left">
             <h3 class="text-center">Lineage of Goju Okinawa Karate Do Association </h3>
-
-            <div class="tree" style="text-align:center;overflow:scroll-x;">
-              <ul>
-                <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a>
-                  <ul>
-                    <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a>
-                      <ul>
-                        <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a></li>
-                        <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a>
-                      <ul>
-                        <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a></li>
-                        <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a></li>
-                        <li><a href="#"><img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="image"><span>Child</span></a></li>
-                      </ul>
-                    </li>
-                   
-                  </ul>
-                </li>
-              </ul>
-            </div> 
-
           </div>
+        </div>  
+        <div class="row" >
+          <div class="col-lg-8 col-sm-2 text-center">
+            <img src="{% static 'img/lenage.jpg' %}" alt="" class="img-fluid" style="width:90vh ;height:100vh; ">
+          </div>
+          <div class="col-lg-3 col-sm-2 text-start">
+            <div class="text-start m-1">
+              <img src="{% static 'img/team/m1.jpg' %}" alt="" class="img-fluid mt-2" style="width:10vh ;height:10vh;  border-radius:50%;">
+              <a href="#"><h5>Sokan MatSumara</h5></a>
+            </div>
+            <div class="text-end m-1">
+              <img src="{% static 'img/team/m2.jpg' %}" alt="" class="img-fluid mt-2" style="width:10vh ;height:10vh;border-radius:50%;">
+              <a href="#"><h5>Sokan MatSumara</h5></a>
+            </div>
+            <div class="text-start m-1">
+              <img src="{% static 'img/team/m3.jpg' %}" alt="" class="img-fluid mt-2" style="width:10vh ;height:10vh; border-radius:50%;">
+              <a href="#"><h5>Sokan MatSumara</h5></a>
+            </div>
+            <div class="text-end m-1">
+              <img src="{% static 'img/team/m2.jpg' %}" alt="" class="img-fluid mt-2" style="width:10vh ;height:10vh;border-radius:50%;">
+              <a href="#"><h5>Sokan MatSumara</h5></a>
+            </div>
+            <div class="text-start m-1">
+              <img src="{% static 'img/team/m3.jpg' %}" alt="" class="img-fluid mt-2" style="width:10vh ;height:10vh; border-radius:50%;">
+              <a href="#"><h5>Sokan MatSumara</h5></a>
+            </div>
+          
+            
         </div>
+ 
       </div>
     </section><!-- End About Section -->
 
@@ -203,6 +269,30 @@
           <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch  px-5 py-3 " data-aos="fade-left">
             <h3>About Us</h3>
             <p>JKMO INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas.</p> 
+            
+              <div class="row">
+                <div class="col-xl-6 mt-2">
+                  <div class="card"style="width: 16rem;">
+                    <img src="{% static 'img/team/m1.jpg' %}" class="card-img-top" alt="..."style="width: 16rem;height:10rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sokan MatSumara</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-success text-center">About More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 mt-2">
+                  <div class="card" style="width: 16rem;">
+                    <img src="{% static 'img/team/m3.jpg' %}" class="card-img-top" alt="..."style="width: 16rem;height:10rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sokan MatSumara</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary text-center">About More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
           </div>
         </div>
       </div>
@@ -221,56 +311,55 @@
           <div class="col-lg-3 col-md-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
               <a href="{% url 'load_kata' %}" > <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x"></a>
-              <h3><a href="{% url 'load_kata' %}"style="color: #000;">Gekisai dai-ichi </a></h3>
+              <h3  class="mx-3"><a href="{% url 'load_kata' %}"style="color: #000;">Gekisai dai-ichi </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/KURURUNFA.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Gekisai dai-ni </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Gekisai dai-ni </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Saifa</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Saifa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <a href="{% url 'load_kata' %}"> <img src=http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SUPARINPEI.gif
-                " alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Seiyunchin</a></h3>
+              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SUPARINPEI.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Seiyunchin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Shisochin</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Shisochin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SANSERU.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sanseru </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sanseru </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEIPAI.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sepai </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sepai </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Kururunfa</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Kururunfa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="450">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEISAN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sesan	</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sesan	</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
@@ -282,13 +371,13 @@
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Sanchin </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sanchin </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="600">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SHISOCHIN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Tensho </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Tensho </a></h3>
             </div>
           </div>
                
@@ -402,98 +491,24 @@
         </div>
 
         <div class="row no-gutters" data-aos="fade-left">
+          {% for folder in folders %}
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+              <a href="#" class="gallery-lightbox">
+                {% if folder.folder_image_url %}
+                <img src="{{folder.folder_image_url.url}}" alt="" class="img-fluid">
+                {% endif %}
                 <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
+                  <a href="{% url 'MoreEvent' folder.id %}"><h6>{{folder.folder_name}}</h6></a>
                 </div>
               </a>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-              <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-              <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-              <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-              <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-              <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-              <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox">
-                <img src="{% static 'img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' %}"><h5>Event Name</h5></a>
-                </div>
-              </a>
-            </div>
-          </div>
-
+          {% endfor %}
         </div>
         <div id="morebtn">
-         <button type="button"><a href="{% url 'MoreEvent' %}">More Events</a></button> 
+         <button type="button"><a href="{% url 'MoreEventall' %}">More Events</a></button> 
         </div>
         
       </div>

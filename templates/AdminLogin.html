@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form | By Code Info</title>
+    <link href="{% static 'css/AdminLogin.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <div class="login-box">
+      <img src="{% static 'img/loginuser.webp' %}" alt="image">
+      <h2>Admin Login</h2>
+      <form action="{%url 'load_AdminDashboard' %}" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Username" name="uname" required>
+        <input type="password" placeholder="Password" name="psw" required>
+        <button type="submit">Sign In</button>
+      </form>
+      <br />
+      <a href="{%url 'load_AdminDashboard' %}">Forgot Password?</a>
+    </div>
+  </body>
+</html>
+
