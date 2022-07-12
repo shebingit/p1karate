@@ -19,23 +19,59 @@ from django.http import JsonResponse
 
 #======= loading Sections=====
 
+def adminlogin(request): 
+    try:
+        if request.method == 'POST':
+            try:
+                username = request.POST['uname']
+                password = request.POST['psw']
+                user = auth.authenticate(username=username, password=password)
+                request.session["uid"] = user.id
+
+                if user is not None:
+                    auth.login(request, user)
+                    if user.is_superuser==1:
+                        return redirect ('load_AdminDashboard')
+
+            except:
+                messages.info(request, 'Invalid username or password')
+                return render(request, 'AdminLogin.html')                        
+        else:
+            #messages.info(request, 'Invalid username or password')
+            return render('AdminLogin.html')        
+    except:
+       # messages.info(request, 'Invalid username or password')
+        return render(request, 'AdminLogin.html')
+
+
+def logout(request):
+    request.session["uid"] = ""
+    auth.logout(request)
+    return redirect('index_load')
+
+
+
 # admin page
 
-def load_admin_dashbord_login(request):
+def Admin11212Dashbord_Login(request):
     return render(request,'AdminLogin.html')
 
+@login_required
 def load_AdminDashboard(request):
     folders=galleryfolder.objects.all()
     return render(request,'DashBoard.html',{'folders':folders})
 
+@login_required
 def admin_gallery_add(request):
     images=gallery.objects.all()
     return render(request,'admin_gallery.html',{'images':images})
 
+@login_required
 def admin_affiliation_load(request):
     affili=affiliation.objects.get(id=1)
     return render(request,'admin_affiliation.html',{'affili':affili})
 
+@login_required
 @csrf_exempt
 def admin_affiliation_add(request):
     if request.method=="POST":
@@ -51,14 +87,15 @@ def admin_affiliation_add(request):
             affi.affi_name=file
             affi.save() 
         return redirect('admin_affiliation_load')
-
+@login_required
 def admin_event_gallery(request,admin_folder_id):
     folder=galleryfolder.objects.get(id=admin_folder_id)
     images=gallery.objects.filter(folder_id=admin_folder_id)
     return render(request,'admin_event_gallery.html',{'folder':folder,'images':images})
 
 def Assmember_Register(request):
-    return render(request,'AssociateMemberRegister.html')
+    members=associate_members.objects.all()
+    return render(request,'AssociateMemberRegister.html',{'members':members})
 
 @csrf_exempt
 def associate_members_add(request):
@@ -75,7 +112,8 @@ def associate_members_add(request):
         return redirect('load_AdminDashboard')
 
 # admin folder create
- 
+
+@login_required
 def create_folder(request):
     if request.method=="POST":
         fname=request.POST['filename']
@@ -105,15 +143,31 @@ def add_images_gallery(request):
         return redirect('admin_event_gallery',folderid.id)
 
 
+#delete sections
+
+def admin_folder_delete(request,ad_delete_id):
+    folder_delete=galleryfolder.objects.get(id=ad_delete_id)
+    folder_delete.delete()
+    return redirect('load_AdminDashboard')
+
+def admin_gallery_delete(request,ad_gallery_id):
+    gallery_delete=gallery.objects.get(id=ad_gallery_id)
+    folder=galleryfolder.objects.get(id=gallery_delete.folder_id.id)
+    images=gallery.objects.filter(folder_id=gallery_delete.folder_id.id)
+    gallery_delete.delete()
+    return render(request,'admin_event_gallery.html',{'folder':folder,'images':images})
+
+
+
 # index page
-def load(request):
-    return render(request,'Lenage.html')
+
 def index_load(request):
     folders=galleryfolder.objects.all()
     return render(request,'index.html',{'folders':folders})
 
 def load_member(request):
-    return render(request,'assmembers.html')
+    members=associate_members.objects.all()
+    return render(request,'assmembers.html',{'members':members})
 
 def load_affiliation(request):
     affili=affiliation.objects.get(id=1)
@@ -121,6 +175,9 @@ def load_affiliation(request):
 
 def load_kata(request):
     return render(request,'kata.html')
+
+def history(request):
+    return render(request,'history.html')
 
 def MoreEvent(request,galley_id):
     folders=galleryfolder.objects.all()

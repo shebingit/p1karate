@@ -6,13 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 #register{
- margin-left: 50vh;
+ margin-left:3vh;
  margin-bottom: 3vh;
 }
 @media(max-width:921px){
   #register{
     margin-top: 15vh;
-    margin-left: 0vh;
+    margin-left: 2vh;
     margin-bottom: 3vh;
    }
   
@@ -21,7 +21,7 @@
 .wrapper{
   margin-top: 15vh;
   position: relative;
-  max-width:70%;
+  max-width:100%;
   width: 100%;
   background: #fff;
   padding: 34px;

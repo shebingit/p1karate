@@ -113,15 +113,19 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          {% for member in members %}
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 mb-5">
               <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{% static 'img/team/m4.jpg' %}" class="img-fluid" alt=""style="border-radius:50%; width:20vh; height:20vh;"></div>
+              {% if member.asm_image %}
+                <div class="pic"><img src="{{ member.asm_image.url}}" class="img-fluid " alt=""style="border-radius:50%; width:20vh; height:20vh;"></div>
+              {% endif %}
                 <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Position:Master</span>
+                  <h4>{{member.asm_name}}</h4>
+                  <span>Position:{{member.asm_position}}</span>
                 </div>
               </div>
             </div>
+          {% endfor %}
               
           </div>
         </div>
@@ -157,14 +161,7 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
+           
           </div>
 
           
