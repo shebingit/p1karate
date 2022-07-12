@@ -25,7 +25,8 @@ urlpatterns =[  path('Admin11212Dashbord_Login',views.Admin11212Dashbord_Login,n
                 path('admin_affiliation_add',views.admin_affiliation_add,name='admin_affiliation_add'),
 
                 # admin delete sections
-
+                
+                path('admin_member_delete/<int:ad_member_id>',views.admin_member_delete,name='admin_member_delete'),
                 path('admin_folder_delete/<int:ad_delete_id>',views.admin_folder_delete,name='admin_folder_delete'),
                 path('admin_gallery_delete/<int:ad_gallery_id>',views.admin_gallery_delete,name='admin_gallery_delete'),
 
@@ -33,13 +34,12 @@ urlpatterns =[  path('Admin11212Dashbord_Login',views.Admin11212Dashbord_Login,n
 
 
                 #user page load 
-    
+                path('preload',views.preload,name='preload'),
                 path('',views.index_load,name='index_load'),
                 path('load_member',views.load_member,name='load_member'),
                 path('load_affiliation',views.load_affiliation,name='load_affiliation'),
                 path('load_kata',views.load_kata,name='load_kata'),
                 path('history',views.history,name='history'),
-                path('preload',views.preload,name='preload'),
                 path('MoreEvent/<int:galley_id>',views.MoreEvent,name='MoreEvent'),
                 path('MoreEventall',views.MoreEventall,name='MoreEventall'),
 

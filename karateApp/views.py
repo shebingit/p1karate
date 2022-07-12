@@ -145,6 +145,11 @@ def add_images_gallery(request):
 
 #delete sections
 
+def admin_member_delete(request,ad_member_id):
+    member_delete=associate_members.objects.get(id=ad_member_id)
+    member_delete.delete()
+    return redirect('Assmember_Register')
+
 def admin_folder_delete(request,ad_delete_id):
     folder_delete=galleryfolder.objects.get(id=ad_delete_id)
     folder_delete.delete()
@@ -190,4 +195,4 @@ def MoreEventall(request):
     return render(request,'MoreEvents.html',{'folders':folders,'images':images})
 
 def preload(request):
-    return render(request,'preload.html')
+    return render(request,'preeload.html')

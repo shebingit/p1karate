@@ -111,11 +111,25 @@ form .text h3 a{
 form .text h3 a:hover{
   text-decoration: underline;
 }
+#admin_table table{
+  width: 100%;
+}
 @media(max-width:921px)
 {
   .wrapper
   {
     margin-top: 10px;
     max-width: 100%;
+  }
+  #admin_table table{
+    scroll-behavior:scroll-x;
+    width: 100%;
+  }
+  #admin_table table thead th{
+    font-size: 12px;
+  }
+  #admin_table table tbody td{
+    font-size: 11px;
+    width: fit-content;
   }
 }
