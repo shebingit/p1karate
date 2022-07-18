@@ -58,13 +58,28 @@ def Admin11212Dashbord_Login(request):
 
 @login_required
 def load_AdminDashboard(request):
-    folders=galleryfolder.objects.all()
-    return render(request,'DashBoard.html',{'folders':folders})
+   
+    return render(request,'DashBoard.html')
 
 @login_required
 def admin_gallery_add(request):
-    images=gallery.objects.all()
-    return render(request,'admin_gallery.html',{'images':images})
+    folders=galleryfolder.objects.all()
+    return render(request,'admin_gallery.html',{'folders':folders})
+
+def load_folder_update(request,fupid):
+    folder=galleryfolder.objects.filter(id=fupid)
+    return render(request,'updatefolder.html',{'folder':folder})
+
+def updatename_folder(request,folder_upid):
+    if request.method=="POST":
+        folder_update=galleryfolder.objects.get(id=folder_upid)
+        folder_update.folder_name=request.POST.get('filename')
+        folder_update.save()
+        folders=galleryfolder.objects.all()
+        return render(request,'admin_gallery.html',{'folders':folders})
+    else:
+        return render(request,'DashBoard.html')
+
 
 @login_required
 def admin_affiliation_load(request):
@@ -124,7 +139,7 @@ def create_folder(request):
         folder=galleryfolder(folder_name=fname,folder_image_url=image)
 
         folder.save()
-        return redirect('load_AdminDashboard')
+        return redirect('admin_gallery_add')
     else:
         return redirect('load_AdminDashboard')
 
@@ -196,3 +211,6 @@ def MoreEventall(request):
 
 def preload(request):
     return render(request,'preeload.html')
+
+def changepassword(request):
+    return render(request,'registration/password_reset_form.html')

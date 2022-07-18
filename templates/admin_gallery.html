@@ -53,13 +53,15 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="{% url 'load_AdminDashboard' %}#hero">Admin DashBord</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'logout' %}"></a></li>logout
+          <li><a class="nav-link scrollto" href="{% url 'logout' %}">Logout</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav><!-- .navbar -->   
+
   
     </div>
-  </header><!-- End Header -->   
+  </header>
+  <!-- End Header -->   
         
         <!-- ======= About Section ======= -->
         <section id="MoreEvents" class="mt-5">
@@ -89,24 +91,30 @@
                 </div>   
                 </div>
                
-                <div class="container"> <hr>
-                    <div class="row no-gutters" data-aos="fade-left">
-                      {% for img in images %}
-                      <div class="col-lg-3 col-md-4 p-1">
-                        <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                          <a href="#" class="gallery-lightbox">
-                            {% if img.image_url %}
-                            <img src="{{img.image_url.url}}" alt="" class="img-fluid"> 
-                            {% endif %}                           
-                          </a>
-                          <a href="#"><ion-icon name="trash-outline" class="fs-4 text-danger mx-2 my-3 text-center"></ion-icon></a>
-                        </div>
-                      </div>
-                    {% endfor %}
-                 
-                    </div>
-                </div>
-
+                <section id="admin_table">
+                  <div class="container">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Event Name</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for folder in folders %}
+                        <tr>
+                          <td><ion-icon name="folder-outline"class="fs-3 mx-2"></ion-icon><a href="{% url 'admin_event_gallery' folder.id %}">{{folder.folder_name}}</a></td>
+                          <td>
+                            <a href="{%url 'load_folder_update' folder.id %}" ><ion-icon name="create-outline" class="fs-3 text-success mx-2"></ion-icon></a>
+                            <a href="{% url 'admin_folder_delete' folder.id %}" onclick="return confirm('Are you sure you want to delete this Folder ?')" ><ion-icon name="trash-outline" class="fs-3 text-danger mx-2"></ion-icon></a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
                 <br><br>
             </div>
         </section><!-- End About Section -->
