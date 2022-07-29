@@ -214,3 +214,7 @@ def preload(request):
 
 def changepassword(request):
     return render(request,'registration/password_reset_form.html')
+
+
+def first(request):
+    return render(request,'first.html')

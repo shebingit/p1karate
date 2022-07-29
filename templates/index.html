@@ -37,7 +37,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'css/lineage.css' %}" rel="stylesheet">
   <!-- =======================================================
   * Template Name: Bootslander - v4.5.0
   * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
@@ -128,6 +127,7 @@
 	top: 2px;
 	left: 2px;
 	font-weight: bold;
+ 
 }
 .parentDrop>.person,
 .spouseDrop>.person,
@@ -135,15 +135,191 @@
 	margin-top: 20px;
 }
 #about video{
-  margin-top:8vh;
+  margin-top:1vh;
+
 }
 @media(max-width:921px)
 {
   #about video{
-    margin-top:0vh;
+    margin-top: 5vh;
+  }
+}
+#container {
+  width:50%; 
+  font-family:verdana,arial,helvetica,sans-serif;
+  font-size:11px;
+  text-align:center;
+  margin:auto;
+}  
+#hname p{
+  color: #456990;
+}
+@media(max-width:921px)
+{
+  #container {
+    width:100%; 
+  }
+
+}
+#hname a {
+  display:block;
+  color:rgb(68, 41, 192);
+  text-decoration:none;
+  
+}
+
+#line1
+{
+  font-size: medium;
+  height: 1px;
+  width: 99px;
+  background: #333;
+  margin-top:0px;
+  
+}
+@media(max-width:921px)
+{
+  #line1
+  {
+    width: 40px;
+  }
+}
+#line2
+{
+  font-size: medium;
+  height: 20px;
+  width:1px;
+  background: #333;
+
+}
+#line3
+{
+  font-size: medium;
+  height: 20px;
+  width:1px;
+  background: #333;
+  margin-left: 100px;
+}
+@media(max-width:921px)
+{
+  #line3
+  {
+    margin-left: 40px;
+  }
+}
+  
+#line4
+{
+  font-size: medium;
+  height: 1px;
+  width: 99px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 100px;
+}
+@media(max-width:921px)
+{
+  #line4
+  {
+    width: 40px;
+    margin-left: 40px;
+  }
+}
+#line5
+{
+  font-size: medium;
+  height: 1px;
+  width:20px;
+  background: #333;
+  margin-top:121px;
+  margin-left: 50px;
+  
+}
+@media(max-width:921px)
+{
+  #line5
+  {
+    margin-left: 5px;
+  }
+}
+#line6
+{
+  
+  font-size: medium;
+  height: 20px;
+  width:1px;
+  background: #333;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+@media(max-width:921px)
+{
+  #line6
+  {
+    margin-left: 40px;
   }
 }
 
+#line7
+{
+  font-size: medium;
+  height: 1px;
+  width: 30px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 70px;
+}
+#line8
+{
+  font-size: medium;
+  height: 1px;
+  width:20px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 90px;
+  
+}
+#line9
+{
+  font-size: medium;
+  height: 1px;
+  width:20px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 120px;
+  
+}
+@media(max-width:921px)
+{
+  #line8
+  {
+    margin-left: 50px;
+  }
+  #line9
+  {
+    margin-left: 90px;
+  }
+}
+
+#container img{
+  width: 12vh;
+  height: 14vh;
+} 
+#hisname
+{
+  text-align: end;
+}
+@media(max-width:921px)
+{
+  #hisname
+  {
+    text-align: center;
+  }
+  #hisname2
+  {
+    display: none;
+  }
+}
 
     
   </style>
@@ -185,7 +361,6 @@
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
             <h1>Goju Ryu Okinawa Karate Do Association<span></span></h1>
-            <h2>Be Karate The Way Of Life</h2>
             
           </div>
         </div>
@@ -217,44 +392,142 @@
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container-fluid">
-
         <div class="row" style="width:100%;color:#000;">
           <div class="col-lg-12 col-lg-12 col-sm-12 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 m-2 " data-aos="fade-left">
-            <h3 class="text-center">Lineage of Goju Okinawa Karate Do Association </h3>
+            <h3 class="text-center">Lineage of Goju Ryu Okinawa  Karate Do Association </h3>
           </div>
-        </div>  
+        </div> 
+        
         <div class="row">
-          <div class="col-lg-3 col-sm-2 text-center">
-            <img src="{% static 'img/karate.jpg' %}" alt="" class="img-fluid" style="width:65vh ;height:80vh; ">
+          <div class="col-lg-2 col-md-6 col-sm-12 text-center mb-3" id="hisname1">
+            <img src="static/img/his.jpg">
+            
           </div>
-          <div class="col-lg-6 col-sm-2 text-start">
-            <img src="{% static 'img/history.jpg' %}" alt="" class="img-fluid" style="width:80vh ;height:120vh; ">
-          </div>
-          <div class="col-lg-2 col-sm-2 text-center">
-            <div class="text-start m-1">
-              <img src="{% static 'img/1.jpg' %}" alt="" class="img-fluid mt-2 mb-2" style="width:10vh ;height:10vh;  border-radius:10%;">
-              <a href="{% url 'history' %}#section_1"><h5 style="font-size:12px;">Grandmaster  Kanryo Higashionna</h5></a>
-            </div>
-            <div class="text-end m-1">
-              <img src="{% static 'img/h1.jpg' %}" alt="" class="img-fluid mt-2 mb-2" style="width:10vh ;height:10vh; border-radius:10%;">
-              <a href="{% url 'history' %}#section_2"><h5  style="font-size:12px;">Grandmaster Chojun Miyagi  </h5></a>
-            </div>
-            <div class="text-start m-1">
-              <img src="{% static 'img/3.webp' %}" alt="" class="img-fluid mt-2 mb-2" style="width:10vh ;height:10vh;  border-radius:10%;">
-              <a href="{% url 'history' %}#section_3"><h5 style="font-size:12px;">Grandmaster Hanshi Eiichi Miyazato</h5></a>
-            </div>
-            <div class="text-end m-1">
-              <img src="{% static 'img/4.jpg' %}" alt="" class="img-fluid mt-2 mb-2" style="width:10vh ;height:10vh; border-radius:10%;">
-              <a href="{% url 'history' %}#section_4"><h5 style="font-size:12px;">Grandmaster Hanshi Kichi Nakamoto</h5> </a>
-            </div>
-            <div class="text-start m-1">
-              <img src="{% static 'img/5.jpg' %}" alt="" class="img-fluid mt-2 mb-2" style="width:10vh ;height:10vh;  border-radius:10%;">
-              <a href="{% url 'history' %}#section_5 %}"><h5 style="font-size:12px;">Hanshi Jaime Pereira   </h5></a>
-            </div> 
+          <div class="col-lg-8 col-md-6 col-sm-12">
+
+             <div id="container">
+          
+              <div class="row">
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                  <div id="hname"class="text-primary" style="font-size: 13px;"><a href="{% url 'history' %}#section_1"><img src="static/img/1.png" style="border-radius:50% ;"></a>Grand Master Kanryo Higashionna<p>( 1853 - 1915 )</p></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4 ">
+                </div>
+                <div class="col-4">
+                  <div id="hname"class="text-primary" style="font-size: 13px;"><a href="{% url 'history' %}#section_2"><img src="static/img/2.png" style="border-radius:50% ;"></a>Grandmaster Chojun Miyagi <p>( 1888 - 1953 )</p></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-2"></div>
+                <div class="col-2">
+                  <div id="line1" class=""></div>
+                  <div id="line2" class="mb-2"></div>
+                  <div id="line2" class=""></div>
+                </div>
+                <div class="col-2"></div>
+              <div class="col-2"></div>
+              <div class="col-2">
+                <div id="line1" class=""></div>
+                <div id="line3" class="mb-2"></div>
+                <div id="line3" class=""></div>
+              </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                  <div id="hname" class="text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_3"><img src="static/img/3.png" style="border-radius:50% ;"></a>Grandmaster Hanshi Eiichi Myazato<p>( 1922 - 1999 )</p></div>
+                </div>
+                <div class="col-4">
+                  <div id="line5" class=""></div>
+                  <div id="line8" class=""></div>
+                  <div id="line9" class=""></div>
+                  <div id="line6" class=""></div>
+                  <div id="line6" class=""></div>
+                </div>
+                <div class="col-4">
+                  <div id="hname" class="text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_4"><img src="static/img/4.jpg" style="border-radius:50% ;"></a>Grandmaster Hanshi Kichi Nakamoto( 10th DAN )<p>( 1931 )</p></div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-4">
+                  <div id="line3"class="mb-4"></div>
+                  <div id="line3"class="mb-4"></div>
+                </div>
+  
+                <div class="col-4">
+                  <div id="hname"class="mt-3 text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_5"><img src="static/img/5.png" style="border-radius:50% ;"></a> Hanshi Jaime Pereira ( 9th DAN ) Myazato<p>( 1949 )</p></div>
+                </div>
+  
+                <div class="col-4">
+                  <div id="line3"class="mb-4"></div>
+                  <div id="line3"class="mb-4"></div>
+                </div>
+  
+              </div>
+  
+              <div class="row">
+                <div class="col-4">
+                  <div id="line3"class="mt-3 mb-2"></div>
+                  
+                </div>
+  
+                <div class="col-4">
+                  <div id="line6" class="mt-3 mb-2"></div>
+                </div>
+  
+                <div class="col-4">
+                  <div id="line3"class="mt-3 mb-2"></div>
+                
+                </div>
+  
+              </div>
+  
+              <div class="row">
+                <div class="col-4">
+                  <div id="line3"class="mt-3"></div>
+                  <div id="line4"class="mb-2"></div>
+                </div>
+  
+                <div class="col-4">
+                  <div id="hname"class="text-primary" style="font-size: 12px;"><a href="#"><img src="static/img/6.jpeg" style="border-radius:50% ;"></a>sihan Francisco Pereira (6th DAN)<p>( 1978 )</p></div>
+                </div>
+  
+                <div class="col-4">
+                  <div id="line3"class="mt-3"></div>
+                  <div id="line1"class="mb-2"></div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                  <div id="line6"class="mt-3"></div>
+                </div>
+                <div class="col-4"></div>
+              </div>
+  
+              <div class="row">
+                <div class="col-12">
+                  <div id="hname"class="text-primary" style="font-size: 12px;"><a href="#"><img src="static/img/7.jpeg" style="border-radius:50% ;"></a>Rensei. Jain Melord<p> ( 1979 )</p><p>Chief Technical Director India</p></div>
+                </div>
+              </div>
             
         </div>
-        <div class="col-lg-1 col-sm-2 text-start"></div>
- 
+
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-12 text-center" id="hisname2">
+            <img src="static/img/his.jpg">
+          </div>
+            
+        </div>
+        
+       
+      
       </div>
     </section><!-- End About Section -->
 
@@ -263,33 +536,35 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-6 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-              <video  controls loop autoplay  style="width:100%;">
-                <source src="static/img/video.mp4" type="video/mp4">
-              </video>
-          </div>
-          <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch  px-5 py-3 " data-aos="fade-left">
-            <h3>About Us</h3>
+          <div class="col-xl-12 col-lg-6 icon-boxes d-flex flex-column align-items-stretch  px-5 py-3 " data-aos="fade-left">
+            <h3 class="text-center">About Us</h3>
             <p>OKAI INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas.</p> 
             
-              <div class="row">
-                <div class="col-xl-6 mt-2">
-                  <div class="card"style="width: 15rem;border:none;">
-                    <img src="{% static 'img/team/m1.jpg' %}" class="card-img-top" alt="..."style="width: 14rem;height:15rem;">
+              <div class="row mt-4">
+               <!--<div class="col-xl-3 col-md-6 col-sm-12 mt-2 mb-2">
+                  <div class="card" style="height:25rem; border:none;">
+                    <img src="{% static 'img/team/h2.png' %}" class="card-img-top" alt="..."style="height:17rem; padding:10px;">
                     <div class="card-body ">
-                      <h5 class="card-title">Sokan MatSumara</h5>
+                      <h5 class="card-title">Sihan Francisco Pereira</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="{% url 'history' %}#section_2" class="btn btn-success text-center">About More</a>
                     </div>
                   </div>
+                </div>--> 
+                <div class="col-lg-7 col-md-6 col-sm-12 mt-2">
+                  <div class="card" style="height:18rem; border:none;">
+                    <video class=""  loop autoplay muted style="width:100%;">
+                      <source src="static/img/video.mp4" type="video/mp4">
+                    </video>
+                    
+                  </div>
+                  
                 </div>
-                <div class="col-xl-6 mt-2">
-                  <div class="card" style="width: 15rem;border:none;">
-                    <img src="{% static 'img/team/m3.jpg' %}" class="card-img-top" alt="..."style="width: 14rem;height:15rem;">
+                <div class="col-xl-4 col-md-6 col-sm-12 mt-2">
+                  <div class="card"style="height:25rem;border:none;">
+                    <img src="{% static 'img/team/h4.png' %}" class="card-img-top" alt="..."style="height:17rem;padding:10px;">
                     <div class="card-body">
-                      <h5 class="card-title">Sokan MatSumara</h5>
+                      <h5 class="card-title">Rensei. Jain Melord</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="{% url 'history' %}#section_5" class="btn btn-primary text-center">About More</a>
                     </div>
                   </div>
                 </div>
@@ -313,73 +588,73 @@
           <div class="col-lg-3 col-md-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
               <a href="{% url 'load_kata' %}" > <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x"></a>
-              <h3  class="mx-3"><a href="{% url 'load_kata' %}"style="color: #000;">Gekisai dai-ichi </a></h3>
+              <h3  class="mx-3"><a href="{% url 'load_kata' %}#kata1"style="color: #000;">Geki Sai Dai Ichi</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/KURURUNFA.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Gekisai dai-ni </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata2" style="color: #000;">Geki Sai Dai Ni</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Saifa</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata3" style="color: #000;">Saifa</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SUPARINPEI.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Seiyunchin</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata4" style="color: #000;">Sanchin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Shisochin</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata5" style="color: #000;">Seiyunchin</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SANSERU.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sanseru </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata6" style="color: #000;">Shisochin </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEIPAI.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sepai </a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata7" style="color: #000;">Sanseru </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
               <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Kururunfa</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata8" style="color: #000;">Sepai</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="450">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEISAN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sesan	</a></h3>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata9" style="color: #000;">Kururunfa	</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
               <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SEIYUCHIN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}" style="color: #000;">Suparunpei </a></h3>
+              <h3><a href="{% url 'load_kata' %}#kata10" style="color: #000;">Seisan </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-              <a href="{% url 'load_kata' %}"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Sanchin </a></h3>
+              <a href="{% url 'load_kata' %}#kata11"> <img src="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata11" style="color: #000;">Suparinpei </a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="600">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SHISOCHIN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}" style="color: #000;">Tensho </a></h3>
+              <a href="{% url 'load_kata' %}#kata12"> <img src="http://gojuryu.gr/jkfgojukai/images/photogallery/kata-anim/SHISOCHIN.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
+              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata12" style="color: #000;">Tensho </a></h3>
             </div>
           </div>
                
@@ -497,8 +772,9 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="#" class="gallery-lightbox">
-                {% if folder.folder_image_url %}
+              {% if folder.folder_image_url %}
+              <a href="{{folder.folder_image_url.url}}" class="gallery-lightbox">
+                
                 <img src="{{folder.folder_image_url.url}}" alt="" class="img-fluid">
                 {% endif %}
                 <div id="event_name">
