@@ -44,6 +44,31 @@
         margin-left: 6vh;
       }
     }
+    #news
+    {
+      margin-top: 10vh;
+      margin-bottom: 5vh;
+    }
+    #news .content
+    {
+      width: 100%;
+      background-color: rgb(249, 246, 246);
+    }
+    #meesages
+    {
+      margin-top: 5vh;
+    }
+    
+    #meesages .container .card{
+      padding: 10px;
+    }
+    .card{
+      padding: 10px;
+      margin: 5px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
   </style>
 </head>
 <body>
@@ -72,34 +97,64 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-8 col-sm-12 px-3 mt-3">
-        <div class="card text-center" style="width: 16rem;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Gallery</h5>
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-body text-center"> 
+            <h5 class="card-title"><i class="bi bi-file-earmark-image"></i> Gallery</h5>
+           
+          </div>
+          <div class="card-footer">
             <a href="{% url 'admin_gallery_add' %}" class="btn btn-primary">Go to Next</a>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-8  col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
+        <div class="card  text-center" style="width: 18rem;">
           <div class="card-body text-center">
-            <h5 class="card-title">Associate Members</h5>
+            <h5 class="card-title mx-2"><i class="bi bi-people"> </i> Associate Members</h5>
+           
+          </div>
+          <div class="card-footer">
             <a href="{% url 'Assmember_Register' %}" class="btn btn-primary center">Go to Next</a>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-8  col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
+        <div class="card  text-center" style="width: 18rem;">
           <div class="card-body text-center">
-            <h5 class="card-title">Contents</h5>
-            <a href="#" class="btn btn-primary center">Go to Next</a>
+            <h5 class="card-title"><i class="bi bi-pencil-square"></i> Katas</h5>
+        </div>
+        <div class="card-footer">
+          <a href="{% url 'load_admin_katas' %}" class="btn btn-primary center">Go to Next</a>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-8 col-sm-12 px-3 mt-3">
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-body text-center">
+            <h5 class="card-title"><i class="bi bi-card-text"></i> Affiliation</h5>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'admin_affiliation_load' %}" class="btn btn-primary center">Go to Next</a>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-8 col-sm-12 px-3 mt-3">
-        <div class="card" style="width: 16rem;">
+        <div class="card text-center" style="width: 18rem;">
           <div class="card-body text-center">
-            <h5 class="card-title">Affiliation</h5>
-            <a href="{% url 'admin_affiliation_load' %}" class="btn btn-primary center">Go to Next</a>
+            <h5 class="card-title"><i class="bi bi-card-text"></i> Content</h5>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'content_load' %}" class="btn btn-primary center">Go to Next</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-8 col-sm-12 px-3 mt-3">
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-body text-center">
+            <h5 class="card-title"><i class="bi bi-pencil-square"></i> Password Change</h5>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'load_passwordchange' %}" class="btn btn-primary center">Go to Next</a>
           </div>
         </div>
       </div>
@@ -107,6 +162,58 @@
   </div>
 
 </section><!-- End Hero -->
+
+<section id="meesages">
+  <div class="container">
+    <h4 class="mb-5" style="color: #000;">Messages</h4>
+    <div class="row">
+    {% for i in usermsg %}
+      <div class="col-lg-3">
+        <div class="card">
+          <div class="card-head">
+            <h5>Name:&nbsp; {{i.uname}}</h5>
+          </div>
+          <div class="card-body">
+            <h6>subject:&nbsp; {{i.usub}}</h6>
+            <p>Message:&nbsp; {{i.msgs}}</p>
+          </div>
+          <div class="card-footer">
+           <a href="{% url 'usermsgdelete' i.id %}"> <i class="bi bi-x-circle text-danger"></i></a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    
+  </div>
+</section>
+
+<section id="news">
+  <form action="{% url 'news_upload' %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+      <h4 class="mb-5" style="color: #000;">News and Events</h4>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control" name=news_cont placeholder="News Content" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-success" type="submit" id="button-addon2">Save</button>
+      </div>
+      <div class="content mt-3">
+        <div class="row">
+        {% for news_event in news_contents %}
+          <div class="col-lg-10 mt-3 ">
+            <a href="{% url 'admin_event' news_event.id %}" style="text-decoration:none ;">{{news_event.news_content}}</a>
+          </div>
+          <div class="col-lg-2">
+            <a href="{% url 'news_delete' news_event.id  %}" class="mt-3"><i class="bi bi-x-circle text-danger"></i></a>
+          </div>
+        {% endfor %}
+        </div>
+        
+      </div>
+    </div>
+  </form>
+  
+</section>
 
 
 

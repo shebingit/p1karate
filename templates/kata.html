@@ -28,6 +28,7 @@
   
     <!-- Template Main CSS File -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
   
     <!-- =======================================================
     * Template Name: Bootslander - v4.5.0
@@ -36,6 +37,123 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
     <style>
+            /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}      /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}
       .inner-page .video-container {
         overflow: hidden;
         position: relative;
@@ -96,7 +214,12 @@
   </head>
   
   <body>
-  
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center ">
       <div class="container d-flex align-items-center justify-content-between">
@@ -109,14 +232,16 @@
   
         <nav id="navbar" class="navbar">
           <ul>
-            <ul>
+            <ul> 
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about">About</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">About Karate</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
               <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
             </ul>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -161,7 +286,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k1.video 'small' %}
             </div>
             </div>
           </div>
@@ -180,7 +305,7 @@
             
             <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k2.video 'small' %}
             </div>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -222,7 +347,7 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k3.video 'small' %}
             </div>
             </div>
           </div>
@@ -249,7 +374,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k4.video 'small' %}
             </div>
             </div>
             <div class="col-lg-12 col-md-6 col-sm-12">
@@ -282,13 +407,17 @@
         <div class="container" id="content">
           <div class="row">
             <h2 class="text-primary text-center">Seiyunchin</h2> 
-              <center>
+            <center>
             <div class="d-flex justify-content-between align-items-center">
-              
                 <img src="static/img/seiinchin.gif" alt="seiinchin.gif" style="width:107px;height:161px;object-fit:cover;">
-              </center>  
             </div>
-            <div class="col-lg-12 col-md-6 col-sm-12">
+            </center>  
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container"style="height:400px;">
+                {% video k5.video 'small' %}
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
               <p><b>Control, Suppress and Pull"</b></p>
               <p>
                 The name Seiunchin implies the use of techniques to off balance, throw and grapple. 
@@ -299,12 +428,6 @@
                 to the untrained eye, the subtleness of "ashi barai" and "suri ashi" can represent footsweeps, parries and traps.
               </p>
             </div>
-            <div class="col-lg-12 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-              <div class="video-container"style="height:400px;">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" style="height:400px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -332,8 +455,8 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-            </div>
+                {% video k6.video 'small' %}
+              </div>
             </div>
           </div>
         </div>
@@ -358,7 +481,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k7.video 'small' %}
             </div>
             </div>
             <div class="col-lg-12 col-md-6 col-sm-12">
@@ -394,7 +517,7 @@
             
             <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k8.video 'small' %}
             </div>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -433,7 +556,7 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k9.video 'small' %}
             </div>
             </div>
           </div>
@@ -460,7 +583,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k10.video 'small' %}
             </div>
             </div>
           </div>
@@ -480,7 +603,7 @@
             
             <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k11.video 'small' %}
             </div>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12">
@@ -515,7 +638,7 @@
             <center>
               <img src="static/img/tensho.gif" alt="tensho.gif" style="width:16vh;height:21vh;object-fit:cover; margin-top:3px;">
             </center>
-            <div class="col-lg-12 col-md-6 col-sm-12">
+            <div class="col-lg-7 col-md-6 col-sm-12">
               <p><b>"Turning Palms"</b></p>
               <p>
                 The second "heishu" kata in Goju-Ryu, Tensho is derived from the Chinese form "Rokkishu". 
@@ -535,9 +658,9 @@
                 as they are free of constant muscle contraction and breathing is "normal".
               </p>
             </div>
-            <div class="col-lg-12 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
               <div class="video-container"style="height:450px ;">
-                <iframe src="https://www.youtube.com/embed/iiiznDpoapQ" style="height:450px ;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                {% video k12.video 'small' %}
             </div>
             </div>
           </div>
@@ -561,23 +684,22 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h3>Goju Ryu Okinawa </h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</em></p>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Goju sensei, Mathapuram, Tholaiyavattam Post, 
+                 <br>
+                 Kanyakumari district, Tamilnadu - 629157<br><br>
+                <strong>Phone:</strong>+91 8344229933<br>
+                <strong>Email:</strong>gojusensei2021@gmail.com<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
               </div>
             </div>
           </div>
-
           <div class="col-lg-1 col-md-6 footer-links">
 
           </div>
@@ -585,19 +707,24 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#contact">Contact Us</a></li>
             </ul>
           </div>
 
           
 
-          <div class="col-lg-3 col-md-6 col-sm-4 footer-newsletter">
+          <div class="col-lg-4 col-md-6 col-sm-4 ">
             <h4>Location</h4>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4013544.1192986723!2d76.04381101336442!3d10.774756217123121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0x559475cc463361f0!2sTamil%20Nadu!5e0!3m2!1sen!2sin!4v1657076370603!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="container p-0" style="height: 300px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4836060720177!2d77.2064292!3d8.254565099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ffa97ecbc82b%3A0x268d7302afc87511!2sGoju%20Ryu%20Okinawa%20Karate%20do%20Association!5e0!3m2!1sen!2sin!4v1660504593748!5m2!1sen!2sin" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
 
         </div>
@@ -619,6 +746,7 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/+919444440030"class="whatsapp_float" target="_blank"> <i class="bi bi-whatsapp whatsapp-icon"></i></a>
   <div id="preloader"></div>
 
   

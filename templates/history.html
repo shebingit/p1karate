@@ -37,7 +37,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  <link href="{% static 'css/lineage.css' %}" rel="stylesheet">
+  <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
+ 
   <!-- =======================================================
   * Template Name: Bootslander - v4.5.0
   * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
@@ -118,13 +119,21 @@
       font-size: 18px;
       font-weight: 600;
     }
+    .disabel-text
+        {
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
     
 
     
   </style>
 </head>
 
-<body>
+<body class="disabel-text">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -139,20 +148,30 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about">About</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index_load' %}">About Karate</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
           <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
           <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-
+   
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
  <section id="section_1" class="hiscontent">
+  
     <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-12 ">
@@ -365,15 +384,17 @@
           <div class="col-lg-9 col-md-3 col-sm-12">
               <h4 class="text-primary">Kyoshi Jamie Pereira 9th DAN</h4>
               <p>
-                <span>Kyoshi Jamie Pereira </span> 8th DAN is a well-known personality in the field of Karate across the globe. 
+                <span>Kyoshi Jamie Pereira </span> 9th DAN is a well-known personality in the field of Karate across the globe. 
                 He is based out of Portugal and has served many official positions in his Karate profession. 
                 Being the direct student of EIICHI MIYAZATO AND KIICHI NAKAMOTO and an expert in Goju Ryu he is 
                 determined to impart the right technique of traditional Goju Ryu karate to his students around the world. 
                 The following are the brief achievement and assignment undertaken by Kyoshi Jamie Pereira.
               </p>
           </div> 
+
+         
              
-          <div class="col-lg-4 col-md-3 col-sm-12">
+          <!-- <div class="col-lg-4 col-md-3 col-sm-12">
               <p>
                 <b>Karate</b>
                 <br>* 1998 to 7 th Dan Goju Ryu Karate by Eiichi Miyazato
@@ -511,7 +532,7 @@
               * 2008
               Awarded Knight Commander of the Order of Justice Necklace D. Peter I Emperor of Brazil
             </p>
-          </div>
+          </div>-->
           
 
       </div>
@@ -519,63 +540,151 @@
   </div>
 </section>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>Goju Ryu Okinawa </h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+<section id="section_6"class="hiscontent">
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-12">
+          <img src="{% static 'img/2.jpg' %}" class="img-fluid" alt=""style="object-fit:cover;">
+        </div> 
+          <div class="col-lg-9 col-md-3 col-sm-12">
+              <h4 class="text-primary">Sihan Francisco Pereira (6th DAN)</h4>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <span>Sihan Francisco Pereira </span>
+                was born on 11/22/1978, in Portugal, he started the practice of karate from an early age under the guidance of his father, Master Jaime Sequeira Pereira.
+                On this long road, he participated in numerous international seminars with illustrious masters of Japan and Europeans, 
+                with Master Eiichi Miyasato, Kilchi Nakamoto, Akira Shiomi, Tsuneo Kinjo, Shinzo Chinen, Tsuguo Sakumoto, 
+                António Oliva Seba in the context of WKF Shiai Kumite, among others, 
+                <p>Graduations:</p>
+
+                  Kyus, Master Jaime Sequeira Pereira<br>
+
+                  1st Dan Master Eiichi Miyasato (UNDOKAN)<br>
+
+                  2nd Dan Mestre Jaime Sequeira Pereira 3rd Dan Mestre Jaime Sequeira Pereira<br>
+
+                  4th Dan Mestre Jaime Sequeira Pereira<br>
+
+                  5th Dan Kichii Nakamoto (OKINAWA KAN) 5th Dan Kobudo Kiichi Nakamoto (OKINAWA KAN)<br>
+
+                  5th Dan Seiwakai Portugal<br>
+
+                  6th Dan Kiichi Nakamoto (OKINAWA KAN)
+
+                  <p>Sports results:</p>
+
+                    4x Regional Champion in Portugal<br>
+
+                    6x National Champion in Portugal<br>
+
+                    3x Goju-Ryu National Champion 2x Goju-Ryu European Champion<br>
+
+                    1x WUKU World Champion<br>
+
+                    4x Kempo Regional Champion<br>
+
+                    3x Kempo National Champion<br>
+
+                    1x Kempo Martial Arts World Champion
+                
               </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
+          </div>
+      </div>
+              
+  </div>
+</section>
+
+<section id="section_7"class="hiscontent">
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-12">
+          <img src="{% static 'img/1.jpg' %}" class="img-fluid" alt=""style="object-fit:cover;">
+        </div> 
+          <div class="col-lg-9 col-md-3 col-sm-12">
+              <h4 class="text-primary">Rensei. Jain Melord</h4>
+              <p>
+                <span>Rensei. Jain Melord</span> 
+              </p>
+          </div>
+      </div>
+              
+  </div>
+</section>
+
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-info">
+            <h3>Goju Ryu Okinawa </h3>
+            <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</em></p>
+            <p>
+              Goju sensei, Mathapuram, Tholaiyavattam Post, 
+               <br>
+               Kanyakumari district, Tamilnadu - 629157<br><br>
+              <strong>Phone:</strong>+91 8344229933<br>
+              <strong>Email:</strong>gojusensei2021@gmail.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
+              <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
             </div>
           </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-           
-          </div>
-
-          
-
-          <div class="col-lg-6 col-md-6 col-sm-4 footer-newsletter">
-            <h4>Location</h4>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4013544.1192986723!2d76.04381101336442!3d10.774756217123121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0x559475cc463361f0!2sTamil%20Nadu!5e0!3m2!1sen!2sin!4v1657076370603!5m2!1sen!2sin" width="570" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+        </div>
+        <div class="col-lg-1 col-md-6 footer-links">
 
         </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">About Karate</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#gallery">Gallery</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        
+
+        <div class="col-lg-4 col-md-6 col-sm-4 ">
+          <h4>Location</h4>
+          <div class="container p-0" style="height: 300px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4836060720177!2d77.2064292!3d8.254565099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ffa97ecbc82b%3A0x268d7302afc87511!2sGoju%20Ryu%20Okinawa%20Karate%20do%20Association!5e0!3m2!1sen!2sin!4v1660504593748!5m2!1sen!2sin" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>karate.in</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
-        Designed by <a href="#">JKMO</a>
-      </div>
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>karate.in</span></strong>. All Rights Reserved
     </div>
-  </footer><!-- End Footer -->
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+      Designed by <a href="#">OKAI</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="https://wa.me/+919444440030"class="whatsapp_float" target="_blank"> <i class="bi bi-whatsapp whatsapp-icon"></i></a>
+<div id="preloader"></div>
+
 
   <!-- Vendor JS Files -->
   <script src="{% static 'vendor/aos/aos.js' %}"></script>
