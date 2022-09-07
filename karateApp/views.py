@@ -230,7 +230,8 @@ def eventform_delete(request,eventform_id):
 def index_load(request):
     folders=galleryfolder.objects.all()
     news_contents=news.objects.all()
-    return render(request,'index.html',{'folders':folders,'news_contents':news_contents})
+    disp1=Admincontent.objects.all()
+    return render(request,'index.html',{'folders':folders,'news_contents':news_contents,'disp1':disp1})
 
 def About_karate(request):
     return render(request,'about_karate.html')
@@ -261,8 +262,20 @@ def load_kata(request):
 def history(request):
     return render(request,'history.html')
 
-def load_JainMelord(request):
-    return render(request,'jainhistory.html')
+def load_JainMelord(request,loadcontid):
+    contents=Admincontent.objects.get(id=loadcontid)
+    if contents.contentstatus == '1':
+        no1=3
+        no2=4
+        
+    else:
+        no1=None
+        no2=None
+    gradu=Graduations.objects.all()
+    subcont=Adminsubcontent.objects.filter(maincontid=loadcontid)
+    return render(request,'jainhistory.html',{'contents':contents,'subcont':subcont,'no1':no1,'no2':no2,'gradu':gradu})
+
+
 
 def MoreEvent(request,galley_id):
     folders=galleryfolder.objects.all()
@@ -342,8 +355,135 @@ def eventcontentdelete(request,eventcontdeleteid):
 
 
 def content_load(request):
-    return render(request,'content.html')
+    disp=Admincontent.objects.all()
+    gradu=Graduations.objects.all()
+    return render(request,'content.html',{'disp':disp,'gradu':gradu})
 
+def create_content(request):
+    if request.method=="POST":
+        hname=request.POST['headname']
+        conts=request.POST['contents']
+        img=request.FILES.get('content_img')
+        contstatus=request.POST['cstatus']
+       
+        content=Admincontent(headname=hname,contparagraph=conts,contimg=img,contentstatus=contstatus)
+        content.save()
+        gradu=Graduations.objects.all()
+        disp=Admincontent.objects.all()
+        return render(request,'content.html',{'disp':disp,'gradu':gradu})
+
+def loadcontupdate(request,contupdateload):
+    contload=Admincontent.objects.get(id=contupdateload)
+    return render(request,'contentupdate.html',{'contload':contload})
+
+def update_content(request,contsave):
+    if request.method=="POST":
+        contload=Admincontent.objects.get(id=contsave)
+        contload.headname=request.POST.get('upheadname')
+        contload.contparagraph=request.POST.get('upcontents')
+        img=request.FILES.get('upcontent_img')
+        contload.contentstatus=request.POST.get('upcstatus')
+        if img:
+            contload.contimg=img
+        else:
+            contload.contimg= contload.contimg
+
+        contload.save()
+        disp=Admincontent.objects.all()
+        gradu=Graduations.objects.all()
+        return render(request,'content.html',{'disp':disp,'gradu':gradu})
+
+def admincontent_delete(request,adcont_deleteid):
+    contdelete=Admincontent.objects.get(id=adcont_deleteid)
+    contdelete.delete()
+    disp=Admincontent.objects.all()
+    gradu=Graduations.objects.all()
+    return render(request,'content.html',{'disp':disp,'gradu':gradu})
+
+
+def graduation_add(request):
+     if request.method=="POST":
+        gyear=request.POST['year']
+        gmaster=request.POST['master']
+        gkyu_year=request.POST['kyu_year']
+        Graduation=Graduations(year=gyear,master=gmaster,kyuyear=gkyu_year)
+        Graduation.save()
+        gradu=Graduations.objects.all()
+        disp=Admincontent.objects.all()
+        return render(request,'content.html',{'disp':disp,'gradu':gradu})
+
+def graduvationuploadedit(request,grdu_id):
+    gradu=Graduations.objects.get(id=grdu_id)
+    return render(request,'graduvationupdate.html',{'gradu':gradu})
+
+def graduation_update(request,grudup_id):
+    if request.method=="POST":
+        graduation=Graduations.objects.get(id=grudup_id)
+        graduation.year=request.POST.get('upyear')
+        graduation.master=request.POST.get('upmaster')
+        graduation.kyuyear=request.POST.get('upkyu_year')
+        graduation.save()
+
+        gradu=Graduations.objects.all()
+        disp=Admincontent.objects.all()
+        return render(request,'content.html',{'disp':disp,'gradu':gradu})
+
+
+
+def graduvationdelete(request,grduddelete_id):
+    gradu=Graduations.objects.get(id=grduddelete_id)
+    gradu.delete()
+    disp=Admincontent.objects.all()
+    gradu=Graduations.objects.all()
+    return render(request,'content.html',{'disp':disp,'gradu':gradu})
+
+
+def loadsubcontent(request,subcontid):
+    disp=Admincontent.objects.get(id=subcontid)
+    subcontents=Adminsubcontent.objects.filter(maincontid=subcontid)
+    return render(request,'adminsubcontent.html',{'disp':disp,'subcontents':subcontents})
+
+
+def subcreate_content(request,subcontentadd_id):
+     if request.method=="POST":
+        disp=Admincontent.objects.get(id=subcontentadd_id)
+        hname=request.POST['subheadname']
+        conts=request.POST['subcontents']
+       
+        img=request.FILES.get('subcontent_img')
+        subcontent=Adminsubcontent(subheadname=hname,subcontparagraph=conts,subcontimg=img,maincontid=disp)
+        subcontents=Adminsubcontent.objects.filter(maincontid=subcontentadd_id)
+        subcontent.save()
+        return render(request,'adminsubcontent.html',{'disp':disp,'subcontents':subcontents})
+
+def subcontentupload(request,subcontupid):
+    subcontents=Adminsubcontent.objects.get(id=subcontupid)
+    return render(request,'subcontentupdate.html',{'subcontents':subcontents})
+
+def update_sbcontent(request,subcontaddid):
+     if request.method=="POST":
+        subcontent=Adminsubcontent.objects.get(id=subcontaddid)
+        subcontent.subheadname=request.POST.get('upsbheadname')
+        subcontent.subcontparagraph=request.POST.get('upsbcontents')
+        img=request.FILES.get('upsbcontent_img')
+        if img:
+            subcontent.subcontimg=img
+        else:
+            subcontent.subcontimg= subcontent.subcontimg
+
+        subcontent.save()
+        disp=Admincontent.objects.get(id=subcontent.maincontid.id)
+        subcontents=Adminsubcontent.objects.filter(maincontid=subcontent.maincontid)
+        return render(request,'adminsubcontent.html',{'disp':disp,'subcontents':subcontents})
+
+
+def subcontent_delete(request,subcont_deleteid):
+    subcontent=Adminsubcontent.objects.get(id=subcont_deleteid)  
+    mainid=subcontent.maincontid.id
+    subcontent.delete()
+    subcontents=Adminsubcontent.objects.filter(maincontid=mainid)
+    disp=Admincontent.objects.get(id=mainid)
+    return render(request,'adminsubcontent.html',{'disp':disp,'subcontents':subcontents})
 
 def load_passwordchange(request):
     return render(request,'account_password.html')

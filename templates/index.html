@@ -440,7 +440,7 @@ marquee a:hover{
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="#"><span><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></span></a></h1>
+        <h1><a href="{% url 'index_load' %}"><span><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -633,7 +633,7 @@ marquee a:hover{
   
               <div class="row">
                 <div class="col-12">
-                  <div id="hname"class="text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_7"><img src="static/img/1.jpg" style="border-radius:50% ;"></a>Rensei. Jain Melord<p> ( 1979 )</p><p>Chief Technical Director India</p></div>
+                  <div id="hname"class="text-primary" style="font-size: 12px;"><a href="#"><img src="static/img/1.jpg" style="border-radius:50% ;"></a>Rensei. Jain Melord<p> ( 1979 )</p><p>Chief Technical Director India</p></div>
                 </div>
               </div>
             
@@ -684,29 +684,21 @@ marquee a:hover{
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                   <div class="card-item">
                     <div class="row">
+                    {% for i in disp1 %}
                       <div class="col-xl-5 text-center">
                         <div class="card-bg">
-                          <img src="static/img/2.jpg" style="object-fit:fill; margin-left:2vh; height:20vh; width:20vh;">
+                        {% if i.contimg %}
+                          <a href="{% url 'load_JainMelord' i.id %}"> <img src="{{i.contimg.url}}" style="object-fit:fill; margin-left:2vh; height:20vh; width:20vh;"></a>
+                        {% endif %}
                         </div>
                       </div>
                       <div class="col-xl-7 d-flex align-items-center">
                         <div class="card-body">
-                          <h4 class="card-title">Sihan Francisco Pereira</h4>
-                          <p style="text-align:justify;"> was born on 11/22/1978, in Portugal, he started the practice of karate from an early age under the guidance of his father, Master Jaime Sequeira Pereira.
-                            On this long road, he participated in numerous international seminars with illustrious masters of Japan and Europeans,</p>
+                          <h4 class="card-title">{{i.headname}}</h4>
+                          <p style="text-align:justify;">{{i.contparagraph}}</p>
                         </div>
                       </div>
-                      <div class="col-xl-5 text-center">
-                        <div class="card-bg">
-                          <a href="{% url 'load_JainMelord' %}"><img src="static/img/1.jpg" style="object-fit:fill; margin-left:2vh; height:23vh; width:23vh;"></a>
-                        </div>
-                      </div>
-                      <div class="col-xl-7 d-flex align-items-center">
-                        <div class="card-body">
-                          <h4 class="card-title">Rensei. Jain Melord</h4>
-                          <p  style="text-align:justify;">Aut est quidem doloremque voluptatem magnam quis excepturi vero quia. Eum eos doloremque architecto illo at beatae dolore. Fugiat suscipit et sint ratione dolores. Aut aliquid ea dolores libero nobis.</p>
-                        </div>
-                      </div>
+                    {% endfor %}
                     </div>
                   </div>
                 </div><!-- End Card Item -->
@@ -969,7 +961,7 @@ marquee a:hover{
               </div>
 
               <div class="email">
-                <i class="bi bi-envelope"></i>
+                <a href="mailto:jainkarate@gmail.com"><i class="bi bi-envelope"></i></a>
                 <h4>Email:</h4>
                 <p>jainkarate@gmail.com</p>
               </div>

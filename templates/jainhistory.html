@@ -68,6 +68,7 @@
       margin-top: 6vh;
       margin-left: 5vh;
       border-radius: 20%;
+      transition: transform 0.7s ease-in-out;
     }
     section img:hover{
       transform: scale(1.1)
@@ -83,14 +84,15 @@
         }    
         
     section{
-        margin-top: 13vh;
+        margin-top: 6vh;
         margin-bottom: 2vh;
         
     }
     @media(max-width:921px)
         {
           section{
-            margin-bottom: 4vh;
+            margin-top: 13vh;
+            margin-bottom: 2vh;
             padding: 2px;
           }
         }
@@ -110,9 +112,7 @@
     }
     .hiscontent .container
     {
-      padding: 15px;
-      background: rgb(239, 227, 120);
-      box-shadow: -10px 10px 20px rgba(0,0,0,0.4);
+      padding: 10px;
       margin:auto;
     }
     .hiscontent  .container span{
@@ -153,7 +153,65 @@
         transform: none;
         }
 
-    
+    /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}
   </style>
 </head>
 
@@ -164,7 +222,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="#"><span><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></span></a></h1>
+        <h1><a href="{% url 'index_load' %}"><span><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -198,112 +256,132 @@
 <section class="hiscontent">
     <div class="container">
         <div class="row">
-           
-            <div class="col-lg-12 col-md-5 col-sm-12">
-                <h4 class="text-primary">Master Y.Jain Melord 5th Dan Black belt</h4>
-                <p>
-                    Welcome to our official website of Goju Ryu Okinawa Karate-Do Association,
-                    India.This association was founded by Master Y.Jain Melord in the year 2019. It
-                    has been started with high-quality training in traditional Okinawa karate at an
-                    affordable cost.
-                </p>
-                <p>
-                    This association aims to develop and spread the highest knowledge in
-                    traditional Goju Ryu Okinawa karate and modern karate in India.
-                    
-                </p>
-                <p>
-                    The founder of this organization Master Y.Jain Melord began the Indian
-                    traditional martial arts training at an early stage of his schooling that is at the age
-                    of 9. He started learning Silambam from his father L.Yesudhasan.
-                </p>
-                <center>
-                    <img src="{% static 'img/0.jpg' %}" >
-                    <p class="m-2 text-center">Dr.L.Yesudhasan RIMP</p>
-                </center>
-                    
-                    
-               
-                <p>
-                    Dr.L.Yesudhasan was born on 05/02/1947.He is a loveble person and has very good personality.
-                    He is a traditional Siddha doctor and also he was interested in silambam the ancient martial arts.
-                    He learned silambam at the age of 15,and he learned kalari fight at the age of 27.Then he taught 
-                    silambam and kalari for many students all over Tamil Nadu He is very sincere in his job and a 
-                    very good master.Then  he passed away in the year 31/8/2013.
-                </p>
-                <div class="himges">
-                   
-                    <img src="{% static 'img/j1.jpg' %}">
-                    <img src="{% static 'img/j2.jpg' %}">
-                    <img src="{% static 'img/3.jpg' %}">
-                    <img src="{% static 'img/j4.jpg' %}">
-                    <img src="{% static 'img/5.jpg' %}">
-                    <img src="{% static 'img/6.jpg' %}">
-                   
-                </div>
-                    
-               
-            </div> 
-                
-        </div>        
-    </div>
-    <div class="container" style="background-color:rgb(223, 215, 215) ;">
-        <p>
-            Then at the age of  15, he was interested in karate and because of his interest in karate, 
-            his father made him learn karate. During his training period, he was disciplined by many 
-            well-known Indian masters in various karate styles like Shotokan, Shitoryu, and Goju-Ryu. 
-            Among the various styles, he was impressed by the traditional Goju Ryu karate and started 
-            to follow and teach this form of art. Then he joined the Master  Francisco Periera (APKO)and 
-            currently holds the position of the president along with Chief Technical Director positions 
-            at this Karate - Do.
-        </p>
-        <h4>Took Training And Graduations Under The Masters</h4>
-        <table class="table p-4">
-           <div class="thead">
-            <th>YEAR</th>
-            <th>MASTERS</th>
-            <th>KYU & YEAR</th>
-           <tbody>
-            <tr>
-                <td>1994-2004</td>
-                <td>Renshi Abraham Jayakumar (Shotokan)</td>
-                <td>9th kyu – Sho - Dan (2002)</td>
-            </tr>
-            <tr>
-                <td>2005-2007</td>
-                <td>(Shotokan)</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2008-2019</td>
-                <td>Hanshi Jamie Periera (Goju Ryu)<br>
-                    Shihan Shivaraja (Goju Ryu)<br>
-                    Shihan Shivaraja (Goju Ryu)
-                </td>
-                <td>Ni – Dan (2010)<br>
-                    San – Dan (2012)<br>
-                    Yon – Dan (2016)
-                </td>
-            </tr>
-            <tr>
-                <td>2020-2022</td>
-                <td>Shihan Francisco Periera (Goju Ryu) </td>
-                <td>Go – Dan (2022)</td>
-            </tr>
-           </tbody>
-           </div>
-        </table>
-        <p>
-            Currently taking training in traditional Goju Ryu from Master Francisco Periera 6th Dan, Portugal. 
-            Master Francisco Periera is the son of Hanshi Jemie Periera and also his student, he took training with 
-            Grand Master Eiichi Miyasato(Jundokan), Hanshi Kitchii Nakamoto (Okinawakan) and he is a
-            well-known personality in the field of traditional Goju Ryu Karate and he got many championships and
-            also World Champion in (WUKU).
 
-        </p>
-        <p>
-            We will conduct many International seminars in India by inviting International master Francisco Periera in every year.
-        </p>
+          <div class="col-lg-12 col-md-5 col-sm-12">
+            <h4 class="text-primary">{{contents.headname}}</h4>
+            <center>
+              {% if contents.contimg %}
+                <img src="{{contents.contimg.url}}" >
+                <p class="m-2 text-center">{{contents.headname}} </p>
+              {% endif %}
+            </center>
+          </div>
+          {% for i in subcont %}
+            {% if i.subcontimg %}
+              <div class="col-lg-3 col-md-5 col-sm-12">
+                <img src="{{i.subcontimg.url}}">
+              </div>
+              <div class="col-lg-9 col-md-5 col-sm-12">
+                <h5 class="m-2">{{i.subheadname}}</h5>
+                <p class="m-2 p-2">{{i.subcontparagraph}}</p>
+              </div>
+              {% if forloop.counter == no1 %}
+                <div class="col-lg-12 col-md-5 col-sm-12">
+                  <div class="conrainer p-3" style="background-color:rgb(196, 192, 192);">
+                    <center>
+                      <img src="{% static 'img/0.jpg' %}" >
+                      <p class="m-2 text-center">Dr.L.Yesudhasan RIMP</p>
+                    </center>
+                
+                    <p>
+                      Dr.L.Yesudhasan was born on 05/02/1947.He is a loveble person and has very good personality.
+                      He is a traditional Siddha doctor and also he was interested in silambam the ancient martial arts.
+                      He learned silambam at the age of 15,and he learned kalari fight at the age of 27.Then he taught 
+                      silambam and kalari for many students all over Tamil Nadu He is very sincere in his job and a 
+                      very good master.Then  he passed away in the year 31/8/2013.
+                  </p>
+                  <div class="himges">
+                    
+                      <img src="{% static 'img/j1.jpg' %}">
+                      <img src="{% static 'img/j2.jpg' %}">
+                      <img src="{% static 'img/3.jpg' %}">
+                      <img src="{% static 'img/j4.jpg' %}">
+                      <img src="{% static 'img/5.jpg' %}">
+                      <img src="{% static 'img/6.jpg' %}">
+                    
+                  </div>
+                  </div>
+                    
+                </div> 
+              {% endif %}     
+              {% if forloop.counter == no2 %}
+                <h4 class="mt-4 mb-3">Took Training And Graduations Under The Masters</h4>
+                <table class="table p-4">
+                  <div class="thead">
+                    <th>YEAR</th>
+                    <th>MASTERS</th>
+                    <th>KYU & YEAR</th>
+                  <tbody>
+                    {% for j in gradu %}
+                    <tr>
+                        <td>{{j.year}}</td>
+                        <td>{{j.master}}</td>
+                        <td>{{j.kyuyear}}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                  </div>
+                </table>
+              {% endif %}
+
+              
+            {% else %}
+              <div class="col-lg-12 col-md-5 col-sm-12">
+                <h5 class="m-2">{{i.subheadname}}</h5>
+                <p class="m-2 p-2">{{i.subcontparagraph}}</p>
+              </div>
+          
+              {% if forloop.counter == no1 %}
+                <div class="col-lg-12 col-md-5 col-sm-12">
+                  <div class="conrainer p-3" style="background-color:rgb(196, 192, 192);">
+                    <center>
+                      <img src="{% static 'img/0.jpg' %}" >
+                      <p class="m-2 text-center">Dr.L.Yesudhasan RIMP</p>
+                    </center>
+                
+                    <p>
+                      Dr.L.Yesudhasan was born on 05/02/1947.He is a loveble person and has very good personality.
+                      He is a traditional Siddha doctor and also he was interested in silambam the ancient martial arts.
+                      He learned silambam at the age of 15,and he learned kalari fight at the age of 27.Then he taught 
+                      silambam and kalari for many students all over Tamil Nadu He is very sincere in his job and a 
+                      very good master.Then  he passed away in the year 31/8/2013.
+                  </p>
+                  <div class="himges">
+                    
+                      <img src="{% static 'img/j1.jpg' %}">
+                      <img src="{% static 'img/j2.jpg' %}">
+                      <img src="{% static 'img/3.jpg' %}">
+                      <img src="{% static 'img/j4.jpg' %}">
+                      <img src="{% static 'img/5.jpg' %}">
+                      <img src="{% static 'img/6.jpg' %}">
+                    
+                  </div>
+                  </div>
+                    
+                </div> 
+              {% endif %}     
+              {% if forloop.counter == no2 %}
+                <h4 class="mt-4 mb-3">Took Training And Graduations Under The Masters</h4>
+                <table class="table p-4">
+                  <div class="thead">
+                    <th>YEAR</th>
+                    <th>MASTERS</th>
+                    <th>KYU & YEAR</th>
+                  <tbody>
+                  {% for j in gradu %}
+                    <tr>
+                        <<td>{{j.year}}</td>
+                        <td>{{j.master}}</td>
+                        <td>{{j.kyuyear}}</td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                  </div>
+                </table>
+              {% endif %}
+            {% endif %}  
+          {% endfor %}
+        
     </div>
   </section>
 

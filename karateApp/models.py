@@ -59,3 +59,21 @@ class UserMessages(models.Model):
     uname=models.CharField(max_length=25)
     usub=models.CharField(max_length=60)
     msgs=models.TextField()
+
+class Admincontent(models.Model):
+    headname=models.CharField(max_length=25)
+    contparagraph=models.TextField()
+    contimg=models.ImageField(upload_to="gallery/",null=True)
+    contentstatus=models.CharField(max_length=5)
+
+
+class Adminsubcontent(models.Model):
+    maincontid=models.ForeignKey(Admincontent,on_delete=models.CASCADE,null=True,blank=True)
+    subheadname=models.CharField(max_length=25)
+    subcontparagraph=models.TextField()
+    subcontimg=models.ImageField(upload_to="gallery/",null=True)
+
+class Graduations(models.Model):
+    year=models.CharField(max_length=30)
+    master=models.CharField(max_length=100)
+    kyuyear=models.CharField(max_length=130)
