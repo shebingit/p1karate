@@ -1,10 +1,13 @@
 #google_translate_element select{
-    background:#f6edfd;
-    color:#383ffa;
+    background:transparent;
+
+    color:rgb(248, 47, 47);
+    margin-top: 3vh;
     border: none;
     border-radius:3px;
-    padding: 5px;
-    width: 60px;
+    padding: 6px;
+    font-size: 14px;
+   
     }
     .goog-logo-link{
       display:none!important;

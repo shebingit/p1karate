@@ -60,9 +60,10 @@ urlpatterns =[  path('Admin11212Dashbord_Login',views.Admin11212Dashbord_Login,n
 
 
                 #user page load 
-                path('',views.preload,name='preload'),
-                path('index_load',views.index_load,name='index_load'),
+                #path('preload',views.preload,name='preload'),
+                path('',views.index_load,name='index_load'),
                 path('About_karate',views.About_karate,name='About_karate'),
+                path('load_jain',views.load_jain,name='load_jain'),
                 path('load_JainMelord/<int:loadcontid>',views.load_JainMelord,name='load_JainMelord'),
                 path('load_member',views.load_member,name='load_member'),
                 path('load_affiliation',views.load_affiliation,name='load_affiliation'),
@@ -73,7 +74,9 @@ urlpatterns =[  path('Admin11212Dashbord_Login',views.Admin11212Dashbord_Login,n
                 path('load_events/<int:event_id>',views.load_events,name='load_events'),
                 path('send_message',views.send_message,name='send_message'),
                 path('usermsgdelete/<int:msgdelete_id>',views.usermsgdelete,name='usermsgdelete'),
-                path('eventcontentdelete/<int:eventcontdeleteid>',views.eventcontentdelete,name='eventcontentdelete'), 
+                path('eventcontentdelete/<int:eventcontdeleteid>',views.eventcontentdelete,name='eventcontentdelete'),
+                
+                path('load_aboutkarate',views.load_aboutkarate,name='load_aboutkarate'), 
                 
 
 

@@ -11,9 +11,9 @@
     <meta content="" name="keywords">
   
     <!-- Favicons -->
-    <link href="{% static 'img/ki.png' %}" rel="icon">
-    <link href="{% static 'img/ki.png' %}" rel="apple-touch-icon">
-    
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon"> 
+  
   <!-- history line CSS File -->
   <link href="{% static 'css/historyline.css' %}" rel="stylesheet">
   
@@ -114,23 +114,21 @@
             <a href="{% url 'index_load' %}"><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></a>
           </div>
   
-        <nav id="navbar" class="navbar">
-          <ul>
+          <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}">Home</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">About Karate</a></li>
-              <li><a class="nav-link scrollto active" href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about">About Us</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
               <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
             </ul>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-  
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
       </div>
     </header><!-- End Header -->
   
@@ -148,7 +146,7 @@
         <div class="container text-center">
   
           <div class="d-flex justify-content-between align-items-center">
-            <h2>Associate Members & Blackbets</h2>
+            <h2>Associate Members & Blackbelts</h2>
           </div>
         </div>
       </section><!-- End Breadcrumbs Section -->
@@ -204,7 +202,7 @@
     </main><!-- End #main -->
   
    <!-- ======= Footer ======= -->
-  <footer id="footer">
+   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -217,14 +215,15 @@
                 Goju sensei, Mathapuram, Tholaiyavattam Post, 
                  <br>
                  Kanyakumari district, Tamilnadu - 629157<br><br>
-                <strong>Phone:</strong>+91 8344229933<br>
-                <strong>Email:</strong>gojusensei2021@gmail.com<br>
-              </p>
+                <p>Phone:+91 8344229933</p>
+                <p>Email:gojusensei2021@gmail.com</p>
+            
               <div class="social-links mt-3">
                 <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
+                <a href="mailto:jainkarate@gmail.com"><i class="bx bx-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -235,8 +234,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero" style="color: rgb(203, 30, 30);">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#gallery">Gallery</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>

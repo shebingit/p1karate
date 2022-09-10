@@ -10,21 +10,27 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- Favicons -->
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
   <style>
     body{
-        object-fit: fill;
-      background-color: black;
+        background: rgba(230,244,48,0.8);
+        background: linear-gradient(90deg, rgba(230,244,48,1) 3%, rgba(223,243,53,1) 56%, rgba(91,240,63,1) 100%);
     }
+    
     video{
-        height:100%;
-        width:100%;
+        
+        min-height:100%;
+        min-width:100%;
         object-fit: fill;
         overflow: hidden;
-        background-color: black;
+        
     }
     video::-webkit-media-controls-panel {
         display: none !important;
         opacity: 1 !important;
+        
     }
     video::-webkit-media-controls-timeline 
     {
@@ -33,37 +39,29 @@
     .container
     {
         width:100%;
-        height:98vh;
         object-fit: fill;
-        background-color:rgb(15, 14, 14);
-    }
-    .container img{
-        display: none;
+        
     }
     @media(max-width:921px)
     {
         .container
         {
             
-            width:340px;
-            height: 100%;
-            background-color: black;
+           height: 450px;
+           min-height: 100%;
             object-fit: fill;
+           
         }
         video{
-           
-            height:450px;
-            width:100%;
-            object-fit: fill;
+
+            
+            min-height: 100%;
+            object-fit:fill;
             overflow: hidden;
+            top: 0;
+            bottom: 0;
         }
-        .container img
-        {
-            display: block;
-            height: 25vh;
-            width: 25vh;
-            margin-top: 4vh;
-        }
+        
     }
   </style>
 
@@ -72,8 +70,8 @@
 
 <body>
     <div class="container">
-        <center><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></center>
-        <video id="addiction-video"  controls>
+       
+        <video id="addiction-video" autoplay muted>
             <source src="static/img/preloads.mp4" type="video/mp4">
         </video>
     </div>
@@ -82,10 +80,11 @@
    
 
         var video = document.getElementById('addiction-video');
-    
         video.addEventListener('ended',function(){
             location.href = 'index_load';
         });
+    
+        
     
     </script>
     

@@ -333,8 +333,10 @@ def send_message(request):
      if request.method=="POST":
         name=request.POST['name']
         sub=request.POST['subject']
+        pho=request.POST['number']
+        mail=request.POST['mail']
         msg=request.POST['message']
-        usermsgs=UserMessages(uname=name,usub=sub,msgs=msg)
+        usermsgs=UserMessages(uname=name,usub=sub,msgs=msg,uemail=mail,uphone=pho)
         usermsgs.save()
         message="Thank you ! We will replay soon..."
         return render(request,'index.html',{'message':message})
@@ -487,3 +489,19 @@ def subcontent_delete(request,subcont_deleteid):
 
 def load_passwordchange(request):
     return render(request,'account_password.html')
+
+def load_jain(request):
+    contents=Admincontent.objects.get(contentstatus=1)
+    if contents.contentstatus == '1':
+        no1=3
+        no2=4
+        
+    else:
+        no1=None
+        no2=None
+    gradu=Graduations.objects.all()
+    subcont=Adminsubcontent.objects.filter(maincontid=contents.id)
+    return render(request,'jainhistory.html',{'contents':contents,'subcont':subcont,'no1':no1,'no2':no2,'gradu':gradu})
+
+def load_aboutkarate(request):
+    return render(request,'aboutkarate.html')

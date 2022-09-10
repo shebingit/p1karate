@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'img/ki.png' %}" rel="icon">
-  <link href="{% static 'img/ki.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -67,8 +67,15 @@
       margin: 5px;
       border-radius: 10px;
       border: none;
+     
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
+    .card-footer{
+      border: none;
+      align-items: center;
+      background-color: #fff;
+    }
+
   </style>
 </head>
 <body>
@@ -168,16 +175,19 @@
     <h4 class="mb-5" style="color: #000;">Messages</h4>
     <div class="row">
     {% for i in usermsg %}
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="card">
-          <div class="card-head">
+          <div class="card-head p-3">
             <h5>Name:&nbsp; {{i.uname}}</h5>
           </div>
           <div class="card-body">
-            <h6>subject:&nbsp; {{i.usub}}</h6>
-            <p>Message:&nbsp; {{i.msgs}}</p>
+            <h6> Subject:&nbsp; {{i.usub}}</h6>
+            <p> Message:&nbsp; {{i.msgs}}</p>
+            <p> Contact no:&nbsp; {{i.uphone}}</p>
+            <p> Email id:&nbsp; {{i.uemail}}</p>
           </div>
-          <div class="card-footer">
+          </div>
+          <div class="card-footer text-center">
            <a href="{% url 'usermsgdelete' i.id %}"> <i class="bi bi-x-circle text-danger"></i></a>
           </div>
         </div>

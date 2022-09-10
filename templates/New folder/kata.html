@@ -1,0 +1,765 @@
+{% load static %}
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Goju Ryu Okinawa </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+   <!-- Favicons -->
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: Bootslander - v4.5.0
+    * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <style>
+            /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}      /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}
+      .inner-page .video-container {
+        overflow: hidden;
+        position: relative;
+        width:100%;
+        margin-top: 10vh;
+        height:350px;
+    }
+    #content{
+      box-shadow:-5px 10px 20px 10px rgba(0,0,0,0.3);
+      padding: 30px;
+    }
+    
+    .inner-page .video-container::after {
+        padding-top: 50.25%;
+        display: block;
+        content: '';
+    }
+    iframe{
+      width:100%;
+      height:350px;
+      padding: 10px;
+    
+
+    }
+    .inner-page h2{
+      font-family: "Lucida Console", Monaco, monospace;
+    }
+    
+    .inner-page .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:350px;
+    }
+    @media(max-width:992px){
+      .inner-page .video-container video {
+       
+        height: 200px;
+        background-size:contain;
+      
+    }
+    .inner-page  iframe {
+    
+      background-size: contain;
+      min-height: 200px;
+    }
+  }
+  .inner-page p
+  {
+    font-style: italic;
+    line-height: 2.25em;
+    text-align: justify;
+    padding: 5px;
+    margin-top: 5px;
+  }
+    </style>
+  </head>
+  
+  <body>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <div class="logo">
+            <!--<h1><a href="#"><span><img src="" alt="" class="img-fluid"></span></a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+             <a href="{% url 'index_load' %}"><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></a>
+          </div>
+  
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+      </div>
+    </header><!-- End Header -->
+  
+    <main id="main">
+  
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section class="breadcrumbs">
+      </section><!-- End Breadcrumbs Section -->
+  
+      <section class="inner-page">
+        <div class="container" id="content">
+          <h2 class="text-center mb-3">KATA</h2>   
+          <p>&nbsp;&nbsp;&nbsp;<b>Kata</b> is often described as a set sequence of karate moves organized into a pre-arranged fight against imaginary opponents. The kata consists of kicks, punches, sweeps, strikes, blocks, and throws. Body movement in various kata includes stepping, twisting, turning, dropping to the ground, and jumping. In Shotokan, kata is not a performance or a demonstration, but is for individual karateka to practice full techniques—with every technique potentially a killing blow; while paying particular attention to form and timing (rhythm).
+            Shotokan Karate is comprised of 26 katas, each with their own emphasis on fast and slow or controlled and powerfull movements. Virtually all of the katas taught today in the Shotokan system have two kiai points.
+            The kiai or "spirit cry" as it is sometimes referred to, occurs only at certain pre-determined moments in each kata. It is precisely at these pre-determined moments that the karate-ka is required to demonstrate a total commitment of body, mind, and spirit, and to channel all of their available energy and apply it appropriately to the required technique. The kiai is a common thread that runs through all major styles of karate.
+          </p>
+          <hr>
+        </div>
+      </section>
+      
+      <section class="inner-page" id="kata1">
+        <div class="container"  id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Geki Sai Dai Ichi</h2> 
+             <img src="static/img/gekisai_ichi.gif" alt="gekisai_ichi.gif" style="width:15vh;height:18vh;object-fit:cover; margin-top:3px;">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p><b>"To Attack and Destroy"</b></p>
+              <p>
+                The Geki Sai Kata were formulated by Chojun Miyagi Sensei in 1940 as a form of physical exercise for high school boys and to 
+                help popularize Goju-Ryu among the public of Okinawa. In 1948, after WWII, Miyagi Sensei began to teach the Geki Sai Kata in depth as a regular part of Goju-Ryu in his own dojo. 
+                Until this time, Sanchin was the first Kata taught in Goju-Ryu. Sanchin Kata is physically and mentally a demanding Kata and 
+                requires a great deal of time and patience to learn and perform properly. The Geki Sai Kata however are easier to learn and perform,
+                and contain dynamic techniques which are more attractive to young people. These Kata contain the same kanji Katas found in Saifa. 
+                This would suggest that even though these Kata were designed primarily as a form of exercise, Miyagi Sensei included his understanding
+                of combat as part of their makeup.
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k1.video 'small' %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata2">
+        <div class="container"  id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Geki Sai Dai Ni</h2> 
+            <div class="d-flex justify-content-between align-items-center">
+              <center>
+                <img src="static/img/gekisai_ni.gif" alt="gekisai_ni.gif" style="width:107px;height:161px;object-fit:cover;">
+              </center>  
+            </div>
+            
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k2.video 'small' %}
+            </div>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>"To Attack and Destroy"</b></p>
+              <p>
+                The Geki Sai Kata were formulated by Chojun Miyagi Sensei in 1940 as a form of physical exercise for high school boys and to 
+                help popularize Goju-Ryu among the public of Okinawa. In 1948, after WWII, Miyagi Sensei began to teach the Geki Sai Kata in depth as a regular part of Goju-Ryu in his own dojo. 
+                Until this time, Sanchin was the first Kata taught in Goju-Ryu. Sanchin Kata is physically and mentally a demanding Kata and 
+                requires a great deal of time and patience to learn and perform properly. The Geki Sai Kata however are easier to learn and perform,
+                and contain dynamic techniques which are more attractive to young people. These Kata contain the same kanji Katas found in Saifa. 
+                This would suggest that even though these Kata were designed primarily as a form of exercise, Miyagi Sensei included his understanding
+                of combat as part of their makeup.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata3">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Saifa</h2>   
+            <center>
+              <img src="static/img/saifa.gif" alt="saifa.gif" style="width:16vh;height:21vh;object-fit:cover; margin-top:3px;">
+            </center>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>"To Smash and Tear to Pieces"</b></p>
+              <p>
+                Saifa is the first of the classical combative Kata taught in Goju-Ryu. 
+                Goju-Ryu's Kata origins come from the martial arts taught in the Fuzhou area of southern China,
+                largely Crane and Xingyi/Baqua as well as other internal and external martial arts.
+                Kanryo Higaonna Sensei was taught this Kata, along with the other Kata of Goju-Ryu,
+                while he studied in China from 1863-1881 under the direction of RuRuKo ( Xie Zhong Xiang in Chinese) and others. 
+                These Kata and martial strategies would become the basis of the the quanfa of Higaonna Sensei,
+                which later Miyagi Sensei would call Goju-Ryu. From an understanding of the grappling
+                and strking techniques of this Kata, Saifa can be interpreted to mean grabbing and tearing of tissue in close-quartered combat.
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k3.video 'small' %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="inner-page" id="kata4">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Sanchin</h2>   
+             <img src="static/img/sanchin.gif" alt="sanchin.gif" style="width:15vh;height:25vh;object-fit:cover; margin-top:3px;">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p><b>"Three Battles or Conflicts"</b></p>
+              <p>
+                Sanchin translates as "3 Battles" or "3 Conflicts". This has many meanings. 
+                First it refers to the struggle to control the body under physical fatigue. 
+                With fatigue the mind begins to lose focus and thus the spirit begins to diminsh as well. 
+                Therefore Sanchin develops discipline, determination, focus, perserverance and other mental attributes. 
+                The Chinese refer to this as Shen (spirit), Shin (mind) and Li (body). Another possible interpretation 
+                refers to the "Three Burners" of the body as decribed in Traditional Chinese Medicine (TCM).
+              </p>
+
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k4.video 'small' %}
+            </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+              <p>
+                One of two "heishu " Kata of Goju-Ryu, Sanchin is probably the most misunderstood Kata
+                in all of Karate. In contrast, it is probably the single most valuable training exercise in Goju-Ryu. 
+                Like the other Kata of Goju-Ryu, Sanchin ( Samm Chien in Chinese) can be found in several Chinese arts, 
+                particulary the southern styles including four styles of Crane Boxing, Dragon Boxing, Tiger Boxing, Lion Boxing, 
+                Dog or Ground Boxing and Monk Fist. Sanchin has such aspects as deep, diaphramatic breathing found in many internal 
+                arts as well as external attributes like mechanical alignment and muscular strength.
+              </p>
+              <p>
+                Because many martial artists have little or no understanding of the true history and nature of the Chinese 
+                arts from which Okinawan Goju-Ryu has its roots, Sanchin has become little more than an isometric form performed 
+                with dangerous tension and improper breathing techniques.
+              </p>
+              <p>
+                The original Sanchin that Higaonna Sensei learned from RuRuKo (1852-1930) was performed with open hands and
+                with less emphasis on muscle contraction and "energetic" breathing. With the changes brought about by 
+                Emperor Meiji (Meiji Restoration Period 1888-1912), Higaonna Sensei changed the open hands to closed fists as the 
+                martial meaning was no longer emphasized. Later Miyagi Sensei would again alter the Kata in pattern alone.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata5">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Seiyunchin</h2> 
+            <center>
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="static/img/seiinchin.gif" alt="seiinchin.gif" style="width:107px;height:161px;object-fit:cover;">
+            </div>
+            </center>  
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container"style="height:400px;">
+                {% video k5.video 'small' %}
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p><b>Control, Suppress and Pull"</b></p>
+              <p>
+                The name Seiunchin implies the use of techniques to off balance, throw and grapple. 
+                It is this understanding that imparts the original intentions of the Kata of Naha-te before the 
+                sport alignment of modern Karate. Seiyunchin contains close-quartered striking, sweeps, 
+                take-downs and throws. Though the Kata itself is void of kicks, many practitioners make 
+                the grave mistake by missing the opportunity to apply any leg technique. Though almost invisible 
+                to the untrained eye, the subtleness of "ashi barai" and "suri ashi" can represent footsweeps, parries and traps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata6">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Shisochin</h2>   
+            <center>
+              <img src="static/img/shisochin.gif" alt="shisochin.gif" style="width:16vh;height:21vh;object-fit:cover; margin-top:3px;">
+            </center>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>""Four Gates" or "Four Directions of Conflict"
+                Shisochin translates as "Four Gates" or "Four Directions of Conflict"</b></p>
+              <p>
+                eave it at that discounts a truer understanding. The third kanjiShisochin is the 
+                same found in Sanchin and Seiyunchin, which translates as "battle" or "conflict". 
+                This lends to a deeper definition of its meaning. The idea of four directions can 
+                come from the performance of the four shotei in four directions. It can also represent 
+                the four elements represented in Chinese medicine (Acupuncture is one) of Wood, Fire, 
+                Metal and Water with man representing Earth. Since this was the science and culture 
+                of that period in China when Higaonna and Miyagi both studied in Fuzhou, it would be 
+                a great oversight to discount this aspect as a very probable explanation of the Kata's name and martial intent.
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k6.video 'small' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="inner-page" id="kata7">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Sanseru</h2>   
+             <img src="static/img/sanseiru.gif" alt="sanseiru.gif" style="width:15vh;height:25vh;object-fit:cover; margin-top:3px;">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p><b>"36 Hands"</b></p>
+              <p>
+                Sanseru is unique as Miyagi Sensei studied this Kata under a direct student of RuRuKo during his studies 
+                in Fuzhou, China beginning in 1916. Sanseru, from its numerical designation, would seem to have its roots 
+                in Buddhism. This is not to infer that there is a religious connection or implication with this Kata or Karate, 
+                but simply that Buddhism was a part of the culture of the people of that time. It should also be noted that numbers 
+                had a very important role in the language of the more ancient Chinese before the invention of kanji.
+              </p>
+
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k7.video 'small' %}
+            </div>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+              <p>
+                A more realistic explanation of this and the other numerically named Kata is that they refer to a systematic method 
+                and understanding of certain groupings of vital acupressure points. 
+                It is this science that the martial arts was based upon and developed.
+              </p>
+              <p>
+                Feng Yiquan, who lived during the Ming Dynasty (1522-67) developed this particular method of using variations of 
+                "36" forbidden points to defeat his opponents. Other disciples 
+                of Feng created other quans expanding the number to 72 and ultimately 108.
+              </p>
+              <p>
+                Sanseru is found in the following styles of Chinese Boxing: Crane, Tiger, and Dog
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata8">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Sepai</h2> 
+            <div class="d-flex justify-content-between align-items-center">
+             
+              <center>
+                <img src="static/img/seipai.gif" alt="seipai.gif" style="width:107px;height:161px;object-fit:cover;">
+              </center>  
+            </div>
+            
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k8.video 'small' %}
+            </div>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>"18 Hands"</b></p>
+              <p>
+                The reference to "18" in naming this Kata has a couple of interpretations. Like Sanseru, there 
+                is suggested a connection to Buddhist philosophy. Another insinuates "18 guards for the King". 
+                The most apparent and most meaningful in the naimg of Sepai is again from the martial arts develpoment and 
+                the use of attacking pressure points. 18 is one half of 36 suggesting that perhaps an alternative set of attacks 
+                and defenses of preferred techniques and strategies from the original Sanseru 36.
+                <p>Sepai is found in Monk Boxing.</p>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata9">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Kururunfa</h2>   
+            <center>
+              <img src="static/img/kururunfa.gif" alt="kururunfa.gif" style="width:16vh;height:21vh;object-fit:cover; margin-top:3px;">
+            </center>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>"Holding Ground"</b></p>
+              <p>
+                Kururunfa epitomizes the ideals of Go-"hard and Ju-"soft". Stance transitions are quick and 
+                explosive while the hands techniques are employed using "muchimi" or a heavy, sticky movement. 
+                As in the other kata of Goju-Ryu, it is quite evident that grappling and close-quartered fighting is 
+                the favored fighting style. The same kanji Kururunfa is found in Saifa. Again, this would suggest a 
+                strong empahsis on grappling. Where most other styles' Kata concentrate on "block/punch", it is obvious 
+                from the unique techniques that this is not the case with Goju-Ryu.
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k9.video 'small' %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="inner-page" id="kata10">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Seisan</h2>   
+             <img src="static/img/seisan.gif" alt="seisan.gif" style="width:15vh;height:18vh;object-fit:cover; margin-top:3px;">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <p><b>13 Hands"</b></p>
+              <p>
+                Seisan, Sanseru and Sepai all share the kanji Seisan . This may well be a Chinese dialect of the Okinawan 
+                term "te" or "fighting hand", referring to life-protection techniques. To better understand these Kata 
+                requires a more defined understanding of the language and culture of the people from which these Kata originated.
+              </p>
+              <p>
+                Seisan is believed to be the oldest of all Okinawan Goju-Ryu Kata. There is a version of Seisan practiced 
+                in the Shorin schools, but in comparison, the Goju-Ryu version is longer and much more complex.Seisan is practiced in the following styles of Chinese Boxing: Dragon, Lion and Monk Fist
+              </p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k10.video 'small' %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata11">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Suparinpei (Pechurin)</h2> 
+            <div class="d-flex justify-content-between align-items-center">
+             
+              <center>
+                <img src="static/img/suparinpei.gif" alt="suparinpei.gif" style="width:107px;height:161px;object-fit:cover;">
+              </center>  
+            </div>
+            
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container">
+                {% video k11.video 'small' %}
+            </div>
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>"108 hands"</b></p>
+              <p>
+                Suparinpei is the most advanced Kata in Goju-Ryu. It contains the greatest number of techniques and variations. 
+                Suparinpei is deceptive in that it appears simple in execution but when combined with transitions and changing tempos, 
+                it is only surpassed by Sanchin in technical difficulty and understanding. Once again, the number "108" is suggested to 
+                have origins in Buddhism and can represent the "108 sins of man". On the Chinese New Year, temple bells are rung 108 times 
+                to "drive away the evils of man". It is believed these named associations with Buddhism is based upon the lack of factual 
+                knowledge of the true nature of these quan.
+              </p>
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+              <p>
+                Secondly, with the cutural changes that took place in China during and after the Boxing Rebellion (1900) and the fall 
+                of the Qing Dynasty (1644-1911), little emphasis was placed on learning such complex arts. Most who learned the fighting 
+                arts after this time, did so as a means of exercise, recreation or artistic performance. In additon, the wide-spread use 
+                of firearms reduced the need and effectiveness for hand-to-hand combat as a means to civil defense.
+                Suparinpei is found in the following styles of Chinese Boxing: Dragon, Tiger and Monk Fist.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="inner-page" id="kata12">
+        <div class="container" id="content">
+          <div class="row">
+            <h2 class="text-primary text-center">Tensho</h2>   
+            <center>
+              <img src="static/img/tensho.gif" alt="tensho.gif" style="width:16vh;height:21vh;object-fit:cover; margin-top:3px;">
+            </center>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <p><b>"Turning Palms"</b></p>
+              <p>
+                The second "heishu" kata in Goju-Ryu, Tensho is derived from the Chinese form "Rokkishu". 
+                Unlike Sanchin, which is almost identical to its Chinese counterpart, Tensho is uniquely Okinawan. 
+                From his understanding of the Kata of Goju-Ryu and the "nature of man", Miyagi Sensei developed 
+                Tensho to further complete his Goju-Ryu where Sanchin left off. Tensho has many of the same principles 
+                of Sanchin but goes further to include more intricate concepts of the techniques of Goju-Ryu. These concepts 
+                expressly come alive in kakie , which in advanced training, breathes life into the bunkai of the Kata of Goju-Ryu.
+              </p>
+              <p>
+                The term "heishu" translates as "closed". As with every aspect of Okinawan Karate, there is more than one definition. First, "heishu" 
+                can refer to muscle contraction and "ibuki" style breathing unique to Sanchin and Tensho.
+              </p>
+              <p>
+                econdly, it can imply the restriction and specific direction of energies within the energy 
+                pathways of the body, both superficial and deep. The other 10 Kata are referred to as "kaishu" or "open", 
+                as they are free of constant muscle contraction and breathing is "normal".
+              </p>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+              <div class="video-container"style="height:450px ;">
+                {% video k12.video 'small' %}
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      
+
+     
+      
+  
+    </main><!-- End #main -->
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Goju Ryu Okinawa </h3>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</em></p>
+              <p>
+                Goju sensei, Mathapuram, Tholaiyavattam Post, 
+                 <br>
+                 Kanyakumari district, Tamilnadu - 629157<br><br>
+                <p>Phone:+91 8344229933</p>
+                <p>Email:gojusensei2021@gmail.com</p>
+            
+              <div class="social-links mt-3">
+                <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
+                <a href="mailto:jainkarate@gmail.com"><i class="bx bx-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-6 footer-links">
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero" style="color: rgb(203, 30, 30);">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-4 col-md-6 col-sm-4 ">
+            <h4>Location</h4>
+            <div class="container p-0" style="height: 300px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4836060720177!2d77.2064292!3d8.254565099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ffa97ecbc82b%3A0x268d7302afc87511!2sGoju%20Ryu%20Okinawa%20Karate%20do%20Association!5e0!3m2!1sen!2sin!4v1660504593748!5m2!1sen!2sin" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>OKAI</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+        Designed by <a href="http://altostechnologies.in/">ALTOS</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/+919444440030"class="whatsapp_float" target="_blank"> <i class="bi bi-whatsapp whatsapp-icon"></i></a>
+  <div id="preloader"></div>
+
+  
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+  
+  </body>
+  
+  </html>

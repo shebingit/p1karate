@@ -58,6 +58,8 @@ class Event_content(models.Model):
 class UserMessages(models.Model):
     uname=models.CharField(max_length=25)
     usub=models.CharField(max_length=60)
+    uemail=models.EmailField()
+    uphone=models.CharField(max_length=60)
     msgs=models.TextField()
 
 class Admincontent(models.Model):

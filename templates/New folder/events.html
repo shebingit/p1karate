@@ -1,0 +1,372 @@
+{% load static %}
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Goju Ryu Okinawa </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: Bootslander - v4.5.0
+    * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <style>
+      .inner-page .video-container {
+        overflow: hidden;
+        position: relative;
+        width:100%;
+        margin-top: 10vh;
+        height:350px;
+    }
+    #content{
+      box-shadow:-5px 10px 20px 10px rgba(0,0,0,0.3);
+      padding: 30px;
+    }
+    
+    .inner-page .video-container::after {
+        padding-top: 50.25%;
+        display: block;
+        content: '';
+    }
+    iframe{
+      width:100%;
+      height:350px;
+      padding: 10px;
+    
+
+    }
+    .inner-page h2{
+      font-family: "Lucida Console", Monaco, monospace;
+    }
+    
+    .inner-page .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:350px;
+    }
+    @media(max-width:992px){
+      .inner-page .video-container video {
+       
+        height: 200px;
+        background-size:contain;
+      
+    }
+    .inner-page  iframe {
+    
+      background-size: contain;
+      min-height: 200px;
+    }
+  }
+  .inner-page p
+  {
+    font-style: italic;
+    line-height: 2.25em;
+    text-align: justify;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}
+section
+{
+  margin-top: 10vh;
+}
+#eventconts .card{
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+    </style>
+  </head>
+  
+  <body>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <div class="logo">
+            <!--<h1><a href="#"><span><img src="" alt="" class="img-fluid"></span></a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="{% url 'index_load' %}"><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></a>
+          </div>
+  
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+  
+    <main id="main">
+  
+      <!-- ======= Breadcrumbs Section ======= -->
+      
+      <section>
+        <div class="container mb-5" id="eventconts" >
+          <h3 class="text-center mb-5">News & Images</h3>
+          <div class="row">
+          {% for i in eventcont %}
+        
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="caard-body">
+                  <h5 class="mb-3">{{i.heading}}</h5>
+                <p class="p-3">{{i.contents}}</p>
+                </div>
+              </div>
+                
+             
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                {% if formregform %}
+                    <div class="container" style="height:300px; box-shadow:1px 2px 5px; ">
+                        <a href="#" class="btn btn-primary mt-2 mb-2" onclick='downloaD("/media/{{formregform.regform}}","RegistrationForm.pdf")'><i class="bi bi-download"></i> Download</a>
+                        <img src="{%static 'img/registration.webp' %}" style="height:80%; width:90%; ">        
+                    </div>
+                {% endif %}
+                </div>
+                {% for event_img in news_contents %}
+                <div class="col-lg-4 mb-3">
+                {% if event_img.event_image_url %}
+                    <div class="imgs">
+                        <img src="{{event_img.event_image_url.url}}" class="w-100">
+                    
+                    </div>
+                
+                {% endif %}  
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+      </section>
+
+      <!--Registration Form download --> 
+
+<script>
+    function downloaD(url, name){
+      fetch(url).then(async (res) =>{
+        const dfile=await res.blob();
+        var blobURL=
+          window.URL && window.URL.createObjectURL
+            ? window.URL.createObjectURL(dfile)
+            : window.webkitURL.createObjectURL(dfile);
+        var templink=document.createElement("a");
+        templink.style.display="none";
+        templink.href=blobURL;
+        templink.setAttribute("download",name);
+  
+        if(typeof templink.download=="undefined"){
+          templink.setAttribute("traget","_blank");
+        }
+        document.body.appendChild(templink);
+        templink.click();
+        
+        setTimeout(function(){
+          document.body.removeChild(templink);
+        }, 200);
+      });
+    }
+  </script>
+
+    </main><!-- End #main -->
+  
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Goju Ryu Okinawa </h3>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</em></p>
+              <p>
+                Goju sensei, Mathapuram, Tholaiyavattam Post, 
+                 <br>
+                 Kanyakumari district, Tamilnadu - 629157<br><br>
+                <strong>Phone:</strong>+91 8344229933<br>
+                <strong>Email:</strong>gojusensei2021@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-6 footer-links">
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero" style="color: rgb(203, 30, 30);">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-4 col-md-6 col-sm-4 ">
+            <h4>Location</h4>
+            <div class="container p-0" style="height: 300px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4836060720177!2d77.2064292!3d8.254565099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ffa97ecbc82b%3A0x268d7302afc87511!2sGoju%20Ryu%20Okinawa%20Karate%20do%20Association!5e0!3m2!1sen!2sin!4v1660504593748!5m2!1sen!2sin" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>OKAI</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+        Designed by <a href="http://altostechnologies.in/">ALTOS</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/+919444440030"class="whatsapp_float" target="_blank"> <i class="bi bi-whatsapp whatsapp-icon"></i></a>
+  <div id="preloader"></div>
+    
+      <!-- Vendor JS Files -->
+      <script src="{% static 'vendor/aos/aos.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+      <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+      <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+      <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    
+      <!-- Template Main JS File -->
+      <script src="{% static 'js/main.js' %}"></script>
+    
+    </body>
+    
+    </html>

@@ -11,9 +11,9 @@
     <meta content="" name="keywords">
   
     <!-- Favicons -->
-    <link href="{% static 'img/ki.png' %}" rel="icon">
-    <link href="{% static 'img/ki.png' %}" rel="apple-touch-icon">
-    
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
+  
   <!-- history line CSS File -->
   <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
   
@@ -137,7 +137,15 @@ section{
   box-shadow: -10px 10px 20px rgba(0,0,0,0.4);
   margin:auto;
 }
-    </style>
+@media(max-width:932px)
+{
+  .hiscontent .container img{
+    height: 45vh;
+    width: 45vh;
+  }
+}
+
+</style>
   </head>
   <script type="text/javascript">
     function googleTranslateElementInit() {
@@ -157,35 +165,34 @@ section{
              <a href="{% url 'index_load' %}"><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></a>
           </div>
   
-        <nav id="navbar" class="navbar">
-          <ul>
+          <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}">Home</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">About Karate</a></li>
-              <li><a class="nav-link scrollto active" href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
-              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
               <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
             </ul>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-  
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
       </div>
     </header><!-- End Header -->
   
     <main id="main">
         <section class="hiscontent">
             <div class="container">
-                <div class="row">
+                <div class="row g-2">
                     <div class="col-12">
                         <h3>A Brief History of Goju-Ryu</h3>
-                        <p class="text-center">
-                              <img src="static/img/his1.webp">   
-                        </p>
+                          <center>
+                            <img src="static/img/his1.webp" class="image-fluid p-2">   
+                          </center>
+                       
                         <p>
                           Unarmed combat was born long before history itself is known, so the art's oldest origins are poorly defined, 
                           often hidden in the folklore of a variety of cultures around the world. Various forms of unarmed combat were 
@@ -196,10 +203,10 @@ section{
 
                         </p>
                         <p class="text-center" style="font-size:23px ;">INDIA</p>
-                        <p class="text-center">
+                        <center>
                           
-                          <img src="static/img/his2.webp">   
-                        </p>
+                          <img src="static/img/his2.webp"  class="image-fluid p-2">   
+                        </center>
                         <p>
                           Based on the heightening of the instinct of self-defense, the different forms of struggle became, for the most 
                           part, part of the culture, especially of the peoples of Central Asia, as in Egypt and Turkey. It is believed that 
@@ -214,10 +221,10 @@ section{
                           becoming known as Bodhidharma.
                         </p>
                         <p class="text-center" style="font-size:23px ;">CHINA</p>
-                        <p class="text-center">
+                        <center>
                           
-                          <img src="static/img/his1.webp">   
-                        </p>
+                          <img src="static/img/his1.webp"  class="image-fluid  p-2">   
+                        </center>
                         <p>
                           After the death of his masters, Bodhidharma traveled to China, his life centered around the Shaolin temple and monastery 
                           located in Hunan Province. Tradition indicates that on top of the physical condition of the monks, Bodhidharma instructed
@@ -235,10 +242,10 @@ section{
                          
                         </p>
                         <p class="text-center" style="font-size:23px ;"> OKINAWA</p>
-                        <p class="text-center">
+                        <center>
                           
                           <img src="static/img/his3.webp">   
-                        </p>
+                        </center>
                         <p>
                           Between the 13th and 14th centuries, in the Ryukyu archipelago – whose main island was Okinawa, the pioneers of the Tode were 
                           the Heimin (peasants). In this period, they used rudimentary techniques (which they just called Te) to defend themselves from 
@@ -290,14 +297,15 @@ section{
                 Goju sensei, Mathapuram, Tholaiyavattam Post, 
                  <br>
                  Kanyakumari district, Tamilnadu - 629157<br><br>
-                <strong>Phone:</strong>+91 8344229933<br>
-                <strong>Email:</strong>gojusensei2021@gmail.com<br>
-              </p>
+                <p>Phone:+91 8344229933</p>
+                <p>Email:gojusensei2021@gmail.com</p>
+            
               <div class="social-links mt-3">
                 <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
+                <a href="mailto:jainkarate@gmail.com"><i class="bx bx-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -308,14 +316,14 @@ section{
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero" style="color: rgb(203, 30, 30);">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">About Karate</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#gallery">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about1">About Us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#contact">Contact Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
             </ul>
           </div>
 

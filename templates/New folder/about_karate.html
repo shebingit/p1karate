@@ -1,0 +1,375 @@
+{% load static %}
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Goju Ryu Okinawa </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
+  
+  <!-- history line CSS File -->
+  <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static '/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: Bootslander - v4.5.0
+    * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <style>
+      /* for desktop */
+.whatsapp_float {
+	position:fixed;
+    opacity:1;
+	width:40px;
+	height:40px;
+	bottom:61px;
+	right:15px;
+    background: #18d26e;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:1.5em;
+    z-index: 996;
+    border-radius: 50px;
+   transition: all 0.4s;
+}
+.whatsapp_float i {
+    font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+  }
+  .whatsapp_float:hover {
+    background: #2ce782;
+    color: #fff;
+  }
+  .whatsapp_float.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        position:fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 60px;
+        right: 15px;
+        font-size:1.5em;
+        visibility:1;
+    }
+    .whatsapp_float i {
+        font-size: 17px;
+    color: #fff;
+    line-height:1.5;
+      }
+      .whatsapp_float:hover {
+        background: #2ce782;
+        color: #fff;
+      }
+}
+
+section{
+    margin-top:10vh;
+   
+    
+}
+.hiscontent  h3{
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: #000;
+    margin:5vh 5vh;
+
+}
+@media(max-width:921px)
+{
+    .hiscontent  h3{
+        font-weight: 500;
+    font-size: 1.5rem;
+    color: #000;
+    margin:3vh 3vh;
+    }
+}
+.hiscontent  p{
+  text-align: justify;
+  padding: 10px;
+  color: #000;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.7rem;
+  font-weight: 400;
+}
+.hiscontent .container
+{
+  padding: 15px;
+  background: rgb(204, 207, 209);
+  box-shadow: -10px 10px 20px rgba(0,0,0,0.4);
+  margin:auto;
+}
+@media(max-width:932px)
+{
+  .hiscontent .container img{
+    height: 45vh;
+    width: 45vh;
+  }
+}
+
+</style>
+  </head>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <body class="disabel-text">
+  
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <div class="logo">
+            <!--<h1><a href="#"><span><img src="" alt="" class="img-fluid"></span></a></h1>-->
+            <!-- Uncomment below if you prefer to use an image logo -->
+             <a href="{% url 'index_load' %}"><img src="{% static 'img/logo1.png' %}" alt="" class="img-fluid"></a>
+          </div>
+  
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#gallery">Gallery</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+      </div>
+    </header><!-- End Header -->
+  
+    <main id="main">
+        <section class="hiscontent">
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-12">
+                        <h3>A Brief History of Goju-Ryu</h3>
+                          <center>
+                            <img src="static/img/his1.webp" class="image-fluid p-2">   
+                          </center>
+                       
+                        <p>
+                          Unarmed combat was born long before history itself is known, so the art's oldest origins are poorly defined, 
+                          often hidden in the folklore of a variety of cultures around the world. Various forms of unarmed combat were 
+                          practiced in India, China, Formosa and Okinawa, south of Japan. In Okinawa, "empty-handed" fighting, at one 
+                          time, was practiced in secret because of the influence of Japanese feudal lords who had conquered the island 
+                          and, therefore, prohibited their subordinates from carrying weapons. This act of banning weapons caused many 
+                          of the peoples to start practicing forms of unarmed combat in secret. From there, the martial art Karate was born.
+
+                        </p>
+                        <p class="text-center" style="font-size:23px ;">INDIA</p>
+                        <center>
+                          
+                          <img src="static/img/his2.webp"  class="image-fluid p-2">   
+                        </center>
+                        <p>
+                          Based on the heightening of the instinct of self-defense, the different forms of struggle became, for the most 
+                          part, part of the culture, especially of the peoples of Central Asia, as in Egypt and Turkey. It is believed that 
+                          the principles of Asian martial arts first emerged in Turkey and India. We know today that the history of karate 
+                          can be examined and understood in India, about two thousand years before the Christian era, India was the birthplace 
+                          of a martial art called Sanskrit, Vajramushti. Evidence seems to indicate that it was generally practiced by the 
+                          Kshatriya, who were the warrior class of the time, and can be compared to the Japanese Samurai and medieval knights 
+                          of Europe. The third son of King Sugandha of southern India is said to have been a member of the Kshatriya of the 
+                          warrior class. However, after a few years he was led by the little Buddhist spirit to the south of the province of 
+                          Madres. He received his religious training from the Dhyna by Master Prajnatara. Under the master's guidance, the 
+                          boy grew up to be a very wise man. He advanced his knowledge in the Dhyana way and in the practice of Buddhism, 
+                          becoming known as Bodhidharma.
+                        </p>
+                        <p class="text-center" style="font-size:23px ;">CHINA</p>
+                        <center>
+                          
+                          <img src="static/img/his1.webp"  class="image-fluid  p-2">   
+                        </center>
+                        <p>
+                          After the death of his masters, Bodhidharma traveled to China, his life centered around the Shaolin temple and monastery 
+                          located in Hunan Province. Tradition indicates that on top of the physical condition of the monks, Bodhidharma instructed
+                          them in physical exercise, conditioning their bodies and their minds. The exercise was called, "Eighteen Hands of Lo-Han". 
+                          This also includes breathing exercises; it was known that this physical activity was a means of hygiene of the body. Eventually 
+                          the monks began to study animals and form exercises that resembled their fighting ways, and it later emerges as Chuan-Fa, 
+                          "the art of the fist". It is important to note that the main reasons for practicing the martial art were physical conditioning 
+                          and self-defense. During the Sui period (589-618), bandits began to invade monasteries for the purpose of stealing food or 
+                          anything of value. At this time the monks, in order to protect their lives and their monasteries, utilized their art of 
+                          Chuan-Fa and defeated the bandits. The reputation of the monks caused the spread of Shaolin struggles, many Buddhists came 
+                          to study the art with the monks. Today there are hundreds of styles, and of course the philosophy has changed quite a bit, 
+                          depending on the personality of the great masters of the styles. In 1609 the art was brought to Okinawa where it underwent 
+                          many changes and later became known as Karate.
+
+                         
+                        </p>
+                        <p class="text-center" style="font-size:23px ;"> OKINAWA</p>
+                        <center>
+                          
+                          <img src="static/img/his3.webp">   
+                        </center>
+                        <p>
+                          Between the 13th and 14th centuries, in the Ryukyu archipelago – whose main island was Okinawa, the pioneers of the Tode were 
+                          the Heimin (peasants). In this period, they used rudimentary techniques (which they just called Te) to defend themselves from 
+                          the Okinawan warrior class, the Peichin. From the 17th century onwards, the Peichin appropriated the technique of Te, giving 
+                          it the name To-de.  From the 15th century onwards, the Okinawan warrior class, the peichin, decided to improve their fighting 
+                          techniques to contain the peasant revolts of that period. It is possible to say, therefore, that it was the members of the warrior 
+                          caste of Okinawa who carried out the development of what would come to be called Karate-do.
+                        </p>
+                        <p>
+                          An important name in Tode's history was Ryosho Tobe who wrote the Oshima Notes. In these notes, Tobe transcribed Kushanku and Kumiaijutsu, 
+                          techniques which gave rise to modern Katas (Kushanku, Kosokun or Kanku). With that, he left one of the few records of the practices of the 
+                          pioneers of the art of the “Chinese Hand”: Kanga Sakugawa, Kung Sian Chun, Chatan Yara and Kishin Teruya.
+                        </p>
+                        <p>
+                          It was in the 19th century the beginning of the training of great masters who would take the modern Tode to Mainland Japan. Until then, 
+                          Tode was secretly passed on to a firstborn (Ishi-soden). Sanga Sakugawa, Sokon Matsumura and others improved Te from the knowledge of 
+                          Wu-shu (war techniques) they brought from China, thus formulating Tode. In particular, Tode was practiced in three cities of Okinawa: 
+                          Shuri, Naha and Tomari where, then, the Shuri-te, Naha-te and Tomari-te lines were developed. With the ban on Isshi-soden, Anko Itosu 
+                          formulated the “Ten Articles on Tode” introducing “primitive Karate” into the educational system of the time, making it possible to teach 
+                          this art in schools in Okinawa.  
+                        </p>
+                        <p>
+                          Later, after Emperor Hirohito's visit to Okinawa, the opportunity arises to present Tode in mainland Japan (at the 1st National Athletic Exhibition in 1921). 
+                          Gichin Funakoshi, who had received an education in the Chinese classics (Daikyo, Chukyo and Shokyo) and a formal education that included Japanese etiquette, 
+                          was chosen to bring Tode to Japan. This event started the transition from the “Chinese Hands” to the “Way of the Hands of the Void”. of martial arts. Consequently, 
+                          Okinawans continued to practice their martial arts in secret.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </main><!-- End #main -->
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Goju Ryu Okinawa </h3>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</em></p>
+              <p>
+                Goju sensei, Mathapuram, Tholaiyavattam Post, 
+                 <br>
+                 Kanyakumari district, Tamilnadu - 629157<br><br>
+                <p>Phone:+91 8344229933</p>
+                <p>Email:gojusensei2021@gmail.com</p>
+            
+              <div class="social-links mt-3">
+                <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
+                <a href="mailto:jainkarate@gmail.com"><i class="bx bx-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-6 footer-links">
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero" style="color: rgb(203, 30, 30);">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about1">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-4 col-md-6 col-sm-4 ">
+            <h4>Location</h4>
+            <div class="container p-0" style="height: 300px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.4836060720177!2d77.2064292!3d8.254565099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ffa97ecbc82b%3A0x268d7302afc87511!2sGoju%20Ryu%20Okinawa%20Karate%20do%20Association!5e0!3m2!1sen!2sin!4v1660504593748!5m2!1sen!2sin" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>OKAI</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+        Designed by <a href="http://altostechnologies.in/">ALTOS</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/+919444440030"class="whatsapp_float" target="_blank"> <i class="bi bi-whatsapp whatsapp-icon"></i></a>
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -12,8 +12,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'img/ki.png' %}" rel="icon">
-  <link href="{% static 'img/ki.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -448,7 +448,9 @@ marquee a:hover{
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">About Karate</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+          
           <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#features">Katas</a></li>
@@ -472,7 +474,7 @@ marquee a:hover{
       <div class="row justify-content-between">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1><b>Goju Ryu Okinawa Karate Do Association</b><span></span></h1>
+            <h1 style=" color:rgb(248, 47, 47);"><b>Goju Ryu Okinawa Karate Do Association</b><span></span></h1>
             
           </div>
         </div>
@@ -580,7 +582,7 @@ marquee a:hover{
                 </div>
   
                 <div class="col-4">
-                  <div id="hname" class="mt-3 text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_5"><img src="static/img/5.png" style="border-radius:50% ;"></a> Hanshi Jaime Pereira ( 9th DAN ) Myazato<p>( 1949 )</p></div>
+                  <div id="hname" class="mt-3 text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_5"><img src="static/img/5.png" style="border-radius:50% ;"></a> Hanshi Jaime Pereira ( 9th DAN )<p>( 1949 )</p></div>
                 </div>
   
                 <div class="col-4">
@@ -614,7 +616,7 @@ marquee a:hover{
                 </div>
   
                 <div class="col-4">
-                  <div id="hname" class="text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_6"><img src="static/img/2.jpg" style="border-radius:50% ;"></a>Sihan Francisco Pereira (6th DAN)<p>( 1978 )</p></div>
+                  <div id="hname" class="text-primary" style="font-size: 12px;"><a href="{% url 'history' %}#section_6"><img src="static/img/2.jpg" style="border-radius:50% ;"></a>Shihan Fransico Pereira (6th DAN)<p>( 1978 )</p></div>
                 </div>
   
                 <div class="col-4">
@@ -633,7 +635,7 @@ marquee a:hover{
   
               <div class="row">
                 <div class="col-12">
-                  <div id="hname"class="text-primary" style="font-size: 12px;"><a href="#"><img src="static/img/1.jpg" style="border-radius:50% ;"></a>Rensei. Jain Melord<p> ( 1979 )</p><p>Chief Technical Director India</p></div>
+                  <div id="hname"class="text-primary" style="font-size: 12px;"><a href="{% url 'load_jain' %}"><img src="static/img/1.jpg" style="border-radius:50% ;"></a>Renshi Jain Melord Y<p> ( 1979 )</p><p>Chief Technical Director India</p></div>
                 </div>
               </div>
             
@@ -659,7 +661,7 @@ marquee a:hover{
         <div class="row">
           <div class="col-xl-12 col-lg-6 icon-boxes d-flex flex-column align-items-stretch  px-5 py-3 " data-aos="fade-left">
             <h3 class="text-center">About Us</h3>
-            <p>OKAI INDIA is a SHOTOKAN Karate Association under the direct instruction of Shihan Sasaki Toshiatsu (Japan), a famous WKF Referee and an authorised shitei Kata Trainer of WKF Katas.</p> 
+            <p>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</p> 
             
               <div class="row mt-4">
                <!--<div class="col-xl-3 col-md-6 col-sm-12 mt-2 mb-2">
@@ -969,7 +971,8 @@ marquee a:hover{
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+91 8344229933</p>
+                <p>+91 8344229933 , &nbsp; +91 9444440030</p>
+                <p></p>
               </div>
 
             </div>
@@ -981,15 +984,17 @@ marquee a:hover{
             <form action="{% url 'send_message' %}" method="post" >
               {% csrf_token %}
               <div class="row">
-                <div class="col-md-12 form-group">
+                <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
-                <!-- <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div> -->
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <div class="col-md-6 form-group">
+                  <input type="email" name="mail" class="form-control" id="email" placeholder="Email id" required>
+                </div>
+                 <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" class="form-control" name="number" id="contact" placeholder="Your Contact number" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -1021,14 +1026,15 @@ marquee a:hover{
                 Goju sensei, Mathapuram, Tholaiyavattam Post, 
                  <br>
                  Kanyakumari district, Tamilnadu - 629157<br><br>
-                <strong>Phone:</strong>+91 8344229933<br>
-                <strong>Email:</strong>gojusensei2021@gmail.com<br>
-              </p>
+                <p>Phone:+91 8344229933</p>
+                <p>Email:gojusensei2021@gmail.com</p>
+            
               <div class="social-links mt-3">
                 <a href="https://m.facebook.com/groups/798487507429225/" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://instagram.com/jainmelord?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="https://wa.me/+919444440030"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.youtube.com/channel/UCn39JR8st1900-SrqL0n6aQ"><i class='bx bxl-youtube' ></i></a>
+                <a href="mailto:jainkarate@gmail.com"><i class="bx bx-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1039,8 +1045,11 @@ marquee a:hover{
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">About Karate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero" style="color: rgb(203, 30, 30);">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Gallery</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#features">Katas</a></li>
