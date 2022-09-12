@@ -69,13 +69,24 @@ urlpatterns =[  path('Admin11212Dashbord_Login',views.Admin11212Dashbord_Login,n
                 path('load_affiliation',views.load_affiliation,name='load_affiliation'),
                 path('load_kata',views.load_kata,name='load_kata'),
                 path('history',views.history,name='history'),
+
+                # HISTORY SINGLE PAGE
+                
+                
+                path('history1',views.history1,name='history1'),
+                path('history2',views.history2,name='history2'),
+                path('history3',views.history3,name='history3'),
+                path('history4',views.history4,name='history4'),
+                path('load_jainsmaster',views.load_jainsmaster,name='load_jainsmaster'),
+
+                
+
                 path('MoreEvent/<int:galley_id>',views.MoreEvent,name='MoreEvent'),
                 path('MoreEventall',views.MoreEventall,name='MoreEventall'),
                 path('load_events/<int:event_id>',views.load_events,name='load_events'),
                 path('send_message',views.send_message,name='send_message'),
                 path('usermsgdelete/<int:msgdelete_id>',views.usermsgdelete,name='usermsgdelete'),
-                path('eventcontentdelete/<int:eventcontdeleteid>',views.eventcontentdelete,name='eventcontentdelete'),
-                
+                path('eventcontentdelete/<int:eventcontdeleteid>',views.eventcontentdelete,name='eventcontentdelete'), 
                 path('load_aboutkarate',views.load_aboutkarate,name='load_aboutkarate'), 
                 
 

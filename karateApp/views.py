@@ -367,9 +367,21 @@ def create_content(request):
         conts=request.POST['contents']
         img=request.FILES.get('content_img')
         contstatus=request.POST['cstatus']
-       
-        content=Admincontent(headname=hname,contparagraph=conts,contimg=img,contentstatus=contstatus)
-        content.save()
+        if contstatus == 1:
+            content=Admincontent(headname=hname,contparagraph=conts,contimg=img,contentstatus=contstatus)
+            content.save()
+        else:
+            counts=Admincontent.objects.filter(contentstatus=0).count()
+            if counts < 1:
+                content=Admincontent(headname=hname,contparagraph=conts,contimg=img,contentstatus=contstatus)
+                content.save()
+            else:
+                messag="Sorry you can not add this Recode."
+                gradu=Graduations.objects.all()
+                disp=Admincontent.objects.all()
+                return render(request,'content.html',{'disp':disp,'gradu':gradu,'messag':messag})
+
+
         gradu=Graduations.objects.all()
         disp=Admincontent.objects.all()
         return render(request,'content.html',{'disp':disp,'gradu':gradu})
@@ -505,3 +517,31 @@ def load_jain(request):
 
 def load_aboutkarate(request):
     return render(request,'aboutkarate.html')
+
+
+# HISTORY SINGLE PAGES
+
+def history1(request):
+    return render(request,'history1.html')
+
+def history2(request):
+    return render(request,'history2.html')
+
+def history3(request):
+    return render(request,'history3.html')
+
+def history4(request):
+    return render(request,'history4.html')
+
+def load_jainsmaster(request):
+    contents=Admincontent.objects.get(contentstatus=0)
+    if contents.contentstatus == '1':
+        no1=3
+        no2=4
+        
+    else:
+        no1=None
+        no2=None
+    gradu=Graduations.objects.all()
+    subcont=Adminsubcontent.objects.filter(maincontid=contents.id)
+    return render(request,'jainhistory.html',{'contents':contents,'subcont':subcont,'no1':no1,'no2':no2,'gradu':gradu})

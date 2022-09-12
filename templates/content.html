@@ -133,6 +133,11 @@
         </div>
       </div>
     </fieldset>
+    {% if messag %}
+      <div class="input-group mb-3 text-center">
+        <p class="" style="color:red ; font-size:1em;">{{messag}}</p>
+      </div>
+    {% endif %}
     <div class="input-group mb-3">
       
       <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Save </button>

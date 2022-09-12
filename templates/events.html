@@ -186,7 +186,7 @@ section
   
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#hero">Home</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
               <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
@@ -194,7 +194,7 @@ section
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#features">Katas</a></li>
               <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
               <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
-              <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+              <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact Us</a></li>
               <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
@@ -290,7 +290,7 @@ section
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h3>Goju Ryu Okinawa </h3>
-              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Periera ( Portugal )</em></p>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Fransico Pereira ( Portugal )</em></p>
               <p>
                 Goju sensei, Mathapuram, Tholaiyavattam Post, 
                  <br>
@@ -313,7 +313,7 @@ section
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero" style="color: rgb(203, 30, 30);">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_aboutkarate' %}">About Karate</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
