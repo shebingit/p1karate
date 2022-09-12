@@ -11,9 +11,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
- <!-- Favicons -->
- <link href="{% static 'img/logo1.png' %}" rel="icon">
- <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="{% static 'img/logo1.png' %}" rel="icon">
+  <link href="{% static 'img/logo1.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -38,7 +38,6 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
   <link href="{% static 'css/transilator.css' %}" rel="stylesheet">
- 
   <!-- =======================================================
   * Template Name: Bootslander - v4.5.0
   * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
@@ -46,114 +45,304 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
-    h4{
-      font-weight: 600;
+    #event_name{
+      margin:5px;
       text-align: center;
-      margin-top: 5vh;
-      margin-bottom: 20px;
+      margin-bottom:4vh;
+      margin-top: 2vh;
+      font-size: 14px;
+     
     }
-    @media(max-width:921px)
-    {
-      h4
-      {
-        font-weight: 500;
-        font-size: 18px;
-        margin-top: 3vh;
-      }
+    #event_name h5{
+      text-decoration: none;
+      color: #000;
+    }
+    #morebtn{
+      width: 100%;
+      text-align: center;
       
     }
-    section img{
-      padding: 5px;
-      width: 75%;
-      margin-top: 6vh;
-      margin-left: 5vh;
-      border-radius: 20%;
-      transition: transform 0.7s ease-in-out;
-    }
-    section img:hover{
-      transform: scale(1.1)
-        }
-
-      @media(max-width:921px)
-        {
-          section img{
-            width:50%;
-            height: 70%;
-           
-          }
-        }    
-        
-    section{
-        margin-top: 6vh;
-        margin-bottom: 2vh;
-        
-    }
-    @media(max-width:921px)
-        {
-          section{
-            margin-top: 13vh;
-            margin-bottom: 2vh;
-            padding: 2px;
-          }
-        }
-    #section_1{
-        margin-top:10vh;
-       
-        
-    }
-    .hiscontent  p{
-      text-align: justify;
-      padding: 3px 2px;
-      color: #000;
-      font-size: 16px;
-      font-style: italic;
-      line-height: 1.7rem;
+    #morebtn button a{
+      color: #fff;
       font-weight: 400;
+      opacity: 1px;
     }
-    .hiscontent .container
-    {
-      padding: 10px;
-      margin:auto;
+    #morebtn  a:hover{
+      opacity: 0.6 px;
     }
-    .hiscontent  .container span{
-      margin-left: 4px;
-      font-size: 18px;
-      font-weight: 600;
+    
+    
+    #morebtn button{
+      background: 	#6cb0d0;
+      width: 140px;
+      height: 40px;
+      border-radius: 50px;
+      transition: all 0.4s;
+      border: none;
+      color: #fff;
     }
-    .disabel-text
+    #event_name:hover  {
+      transform: scale(1.1);
+    }
+
+  /* Person */
+.person {
+	border: 1px solid black;
+	padding: 10px;
+	min-width: 150px;
+	background-color: #FFFFFF;
+	display: inline-block;
+}
+
+.person.female {
+	border-color: #F45B69;
+}
+
+.person.male {
+	border-color: #456990;
+}
+
+.person div {
+	text-align: center;
+}
+
+.person .name {
+	font-size: 16px;
+}
+
+.person .parentDrop, .person .spouseDrop, .person .childDrop {
+	border: 1px dashed #000000;
+	width: auto;
+	min-width: 80px;
+	min-height: 80px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding-top: 15px;
+}
+
+.person .parentDrop>span,
+.person .spouseDrop>span,
+.person .childDrop>span {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	font-weight: bold;
+ 
+}
+.parentDrop>.person,
+.spouseDrop>.person,
+.childDrop>.person {
+	margin-top: 20px;
+}
+#about video{
+  margin-top:1vh;
+
+}
+@media(max-width:921px)
+{
+  #about video{
+    margin-top: 5vh;
+  }
+}
+#container {
+  width:70%; 
+  font-family:verdana,arial,helvetica,sans-serif;
+  font-size:11px;
+  text-align:center;
+  margin:auto;
+  padding: 25px;
+  border-radius: 2%;
+  cursor: pointer;
+  transform: scale(1);
+  transform: scale(1);
+  background: rgb(204, 207, 209);
+  box-shadow: -10px 10px 20px rgba(0,0,0,0.4);
+  margin-bottom: 4vh;
+} 
+#hname p{
+  color: #456990;
+}
+@media(max-width:921px)
+{
+  #container {
+    width:100%; 
+  }
+
+}
+#hname a {
+  display:block;
+  color:rgb(68, 41, 192);
+  text-decoration:none;
+  
+}
+
+#line1
+{
+  font-size: medium;
+  height: 1px;
+  width: 99px;
+  background: #333;
+  margin-top:0px;
+  
+}
+@media(max-width:921px)
+{
+  #line1
+  {
+    width: 40px;
+  }
+}
+#line2
+{
+  font-size: medium;
+  height: 20px;
+  width:1px;
+  background: #333;
+
+}
+#line3
+{
+  font-size: medium;
+  height: 20px;
+  width:1px;
+  background: #333;
+  margin-left: 100px;
+}
+@media(max-width:921px)
+{
+  #line3
+  {
+    margin-left: 40px;
+  }
+}
+  
+#line4
+{
+  font-size: medium;
+  height: 1px;
+  width: 99px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 100px;
+}
+@media(max-width:921px)
+{
+  #line4
+  {
+    width: 40px;
+    margin-left: 40px;
+  }
+}
+#line5
+{
+  font-size: medium;
+  height: 1px;
+  width:20px;
+  background: #333;
+  margin-top:121px;
+  margin-left: 50px;
+  
+}
+@media(max-width:921px)
+{
+  #line5
+  {
+    margin-left: 5px;
+  }
+}
+#line6
+{
+  
+  font-size: medium;
+  height: 20px;
+  width:1px;
+  background: #333;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+@media(max-width:921px)
+{
+  #line6
+  {
+    margin-left: 40px;
+  }
+}
+
+#line7
+{
+  font-size: medium;
+  height: 1px;
+  width: 30px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 70px;
+}
+#line8
+{
+  font-size: medium;
+  height: 1px;
+  width:20px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 90px;
+  
+}
+#line9
+{
+  font-size: medium;
+  height: 1px;
+  width:20px;
+  background: #333;
+  margin-top:0px;
+  margin-left: 120px;
+  
+}
+@media(max-width:921px)
+{
+  #line8
+  {
+    margin-left: 50px;
+  }
+  #line9
+  {
+    margin-left: 90px;
+  }
+}
+
+#container img{
+  width: 12vh;
+  height: 14vh;
+} 
+#hisname1
+{
+  text-align: end;
+}
+#hisname2
+{
+  display:none;
+}
+@media(max-width:921px)
+{
+#hisname1
+  {
+  display:none;
+  }
+ 
+  #hisname2
+  {
+    display:inline;
+    text-align: center;
+  }
+}
+.disabel-text
         {
           -webkit-user-select: none;
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
         }
-
-    
-    .hiscontent center img{
-        width: 24vh;
-        height: 28vh;
-    }
-    .hiscontent .himges
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .hiscontent .himges img{
-        padding: 5px;
-      width: 47vh;
-      height:50vh;
-      margin-top: 0vh;
-      margin-left: 0vh;
-      border-radius: 0%;
-
-    }
-    .hiscontent .himges img:hover{
-        transform: none;
-        }
-
-    /* for desktop */
+/* for desktop */
 .whatsapp_float {
 	position:fixed;
     opacity:1;
@@ -212,6 +401,35 @@
         color: #fff;
       }
 }
+#container #hname:hover{
+  transform: scale(1.2);
+}
+iframe
+{
+  height: 100%;
+}
+@media(max-width:921px)
+{
+  iframe
+  {
+    height: 100%;
+  }
+}
+marquee a
+{
+  margin-right: 2rem;
+  color: rgb(7, 46, 220);
+  font-size: 18px;
+  font-weight: 600px;
+  font-family: italic;
+}
+marquee a:hover{
+  transform: scale(1);
+  font-size: 19px;
+}
+
+
+    
   </style>
 </head>
 
@@ -229,13 +447,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="{% url 'index_load' %}#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index_load' %}#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+          <li><a class="nav-link scrollto " href="{% url 'About_karate' %}">History of Goju ryu</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'load_gallery' %}#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'load_gallery' %}#gallery">Gallery</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_katts' %}#features">Katas</a></li>
-          <li><a class="nav-link scrollto active" href="{% url 'index_load' %}#about1">About Us</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'index_load' %}#about1">About Us</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
           <li><a class="nav-link scrollto" href="{% url 'index_load' %}#contact">Contact</a></li>
           <li><a class="nav-link scrollto" id="google_translate_element"></a></li>
@@ -244,147 +462,53 @@
       </nav><!-- .navbar -->
 
     </div>
+    
   </header><!-- End Header -->
-   
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-  </script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <main>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+        </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<section class="hiscontent">
-    <div class="container">
-        <div class="row">
-
-          <div class="col-lg-12 col-md-5 col-sm-12">
-            <h4 class="text-primary">{{contents.headname}}</h4>
-            <center>
-              {% if contents.contimg %}
-                <img src="{{contents.contimg.url}}" >
-                <p class="m-2 text-center">{{contents.headname}} </p>
-              {% endif %}
-            </center>
+        <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery mt-5">
+        <div class="container mt-3">
+  
+          <div class="section-title" data-aos="fade-up">
+            <h2>Gallery</h2>
+            <p> Events Gallery</p>
           </div>
-          {% for i in subcont %}
-            {% if i.subcontimg %}
-              <div class="col-lg-3 col-md-5 col-sm-12">
-                <img src="{{i.subcontimg.url}}">
-              </div>
-              <div class="col-lg-9 col-md-5 col-sm-12">
-                <h5 class="m-2">{{i.subheadname}}</h5>
-                <p class="m-2 p-2">{{i.subcontparagraph}}</p>
-              </div>
-              {% if forloop.counter == no1 %}
-                <div class="col-lg-12 col-md-5 col-sm-12">
-                  <div class="conrainer p-3" style="background-color:rgb(243, 239, 239);">
-                    <center>
-                      <img src="{% static 'img/0.jpg' %}" >
-                      <p class="m-2 text-center">Dr.L.Yesudhasan RIMP</p>
-                    </center>
-                
-                    <p>
-                      Dr.L.Yesudhasan was born on 05/02/1947.He is a loveble person and has very good personality.
-                      He is a traditional Siddha doctor and also he was interested in silambam the ancient martial arts.
-                      He learned silambam at the age of 15,and he learned kalari fight at the age of 27.Then he taught 
-                      silambam and kalari for many students all over Tamil Nadu He is very sincere in his job and a 
-                      very good master.Then  he passed away in the year 31/8/2013.
-                  </p>
-                  <div class="himges">
-                    
-                      <img src="{% static 'img/j1.jpg' %}">
-                      <img src="{% static 'img/j2.jpg' %}">
-                      <img src="{% static 'img/3.jpg' %}">
-                      <img src="{% static 'img/j4.jpg' %}">
-                      <img src="{% static 'img/5.jpg' %}">
-                      <img src="{% static 'img/6.jpg' %}">
-                    
+  
+          <div class="row g-2" data-aos="fade-left">
+            {% for folder in folders %}
+  
+            <div class="col-lg-2 col-md-4 col-sm-12">
+              <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                {% if folder.folder_image_url %}
+                <a href="{{folder.folder_image_url.url}}" class="gallery-lightbox">
+                  
+                  <img src="{{folder.folder_image_url.url}}" alt="" class="img-fluid">
+                  {% endif %}
+                  <div id="event_name">
+                    <a href="{% url 'MoreEvent' folder.id %}"><h6>{{folder.folder_name}}</h6></a>
                   </div>
-                  </div>
-                    
-                </div> 
-              {% endif %}     
-              {% if forloop.counter == no2 %}
-                <h4 class="mt-4 mb-3">Took Training And Graduations Under The Masters</h4>
-                <table class="table p-4">
-                  <div class="thead">
-                    <th>YEAR</th>
-                    <th>MASTERS</th>
-                    <th>KYU & YEAR</th>
-                  <tbody>
-                    {% for j in gradu %}
-                    <tr>
-                        <td>{{j.year}}</td>
-                        <td>{{j.master}}</td>
-                        <td>{{j.kyuyear}}</td>
-                    </tr>
-                  {% endfor %}
-                  </tbody>
-                  </div>
-                </table>
-              {% endif %}
-
-              
-            {% else %}
-              <div class="col-lg-12 col-md-5 col-sm-12">
-                <h5 class="m-2">{{i.subheadname}}</h5>
-                <p class="m-2 p-2">{{i.subcontparagraph}}</p>
+                </a>
               </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div id="morebtn">
+           <button type="button"><a href="{% url 'MoreEventall' %}">More Events</a></button> 
+          </div>
           
-              {% if forloop.counter == no1 %}
-                <div class="col-lg-12 col-md-5 col-sm-12">
-                  <div class="conrainer p-3" style="background-color:rgb(243, 239, 239);">
-                    <center>
-                      <img src="{% static 'img/0.jpg' %}" >
-                      <p class="m-2 text-center">Dr.L.Yesudhasan RIMP</p>
-                    </center>
-                
-                    <p>
-                      Dr.L.Yesudhasan was born on 05/02/1947.He is a loveble person and has very good personality.
-                      He is a traditional Siddha doctor and also he was interested in silambam the ancient martial arts.
-                      He learned silambam at the age of 15,and he learned kalari fight at the age of 27.Then he taught 
-                      silambam and kalari for many students all over Tamil Nadu He is very sincere in his job and a 
-                      very good master.Then  he passed away in the year 31/8/2013.
-                  </p>
-                  <div class="himges">
-                    
-                      <img src="{% static 'img/j1.jpg' %}">
-                      <img src="{% static 'img/j2.jpg' %}">
-                      <img src="{% static 'img/3.jpg' %}">
-                      <img src="{% static 'img/j4.jpg' %}">
-                      <img src="{% static 'img/5.jpg' %}">
-                      <img src="{% static 'img/6.jpg' %}">
-                    
-                  </div>
-                  </div>
-                    
-                </div> 
-              {% endif %}     
-              {% if forloop.counter == no2 %}
-                <h4 class="mt-4 mb-3">Took Training And Graduations Under The Masters</h4>
-                <table class="table p-4">
-                  <div class="thead">
-                    <th>YEAR</th>
-                    <th>MASTERS</th>
-                    <th>KYU & YEAR</th>
-                  <tbody>
-                  {% for j in gradu %}
-                    <tr>
-                        <td>{{j.year}}</td>
-                        <td>{{j.master}}</td>
-                        <td>{{j.kyuyear}}</td>
-                    </tr>
-                  {% endfor %}
-                  </tbody>
-                  </div>
-                </table>
-              {% endif %}
-            {% endif %}  
-          {% endfor %}
-        
-    </div>
-  </section>
+        </div>
+      </section><!-- End Gallery Section -->
+
+    </main><!-- End #main -->
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -395,7 +519,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h3>Goju Ryu Okinawa </h3>
-              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Pereira ( Portugal )</em></p>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Pereira( Portugal )</em></p>
               <p>
                 Goju sensei, Mathapuram, Tholaiyavattam Post, 
                  <br>
@@ -421,15 +545,18 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#hero" >Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_aboutkarate' %}">About Karate</a></li>
+
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
+              
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_gallery' %}#gallery">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_katts' %}#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#features">Katas</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#contact">Contact Us</a></li>
             </ul>
           </div>
+
           
 
           <div class="col-lg-4 col-md-6 col-sm-4 ">

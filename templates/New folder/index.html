@@ -52,6 +52,7 @@
       margin-top: 2vh;
       font-size: 14px;
      
+     
     }
     #event_name h5{
       text-decoration: none;
@@ -451,8 +452,8 @@ marquee a:hover{
           <li><a class="nav-link scrollto" href="{% url 'load_aboutkarate' %}">About Karate</a></li>
           <li><a class="nav-link scrollto" href="{% url 'About_karate' %}">History of Goju ryu</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_member' %}">Associate Members</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#features">Katas</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'load_gallery' %}#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'load_katts' %}#features">Katas</a></li>
           <li><a class="nav-link scrollto" href="#about1">About Us</a></li>
           <li><a class="nav-link scrollto" href="{% url 'load_affiliation' %}">Affiliaton</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
@@ -658,24 +659,16 @@ marquee a:hover{
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-12 col-lg-6 icon-boxes d-flex flex-column align-items-stretch  px-5 py-3 " data-aos="fade-left">
+          <div class="col-xl-12 col-lg-6 icon-boxes d-flex flex-column align-items-stretch  " data-aos="fade-left">
             <h3 class="text-center">About Us</h3>
-            <p class="m-2 p-2" style="font-size:15px ;">Welcome to our official website of Goju Ryu Okinawa Karate-Do Association, India. This Association was founded 
+            <p class="m-2 p-2" style="font-size:15px; text-align:justify;">Welcome to our official website of Goju Ryu Okinawa Karate-Do Association, India. This Association was founded 
               by Master Y. Jain Melord in the year 2019. It has been started with high-quality training in traditional Okinawa 
               karate at an affordable cost. This association Aims to develop and spread the highest knowledge in traditional Goju 
               Ryu Okinawa karate and modern karate in India. Goju Ryu Okinawa Karate Do Association is a Traditional Goju Ryu 
-              Association under Direct Instruction of Shihan Fransico Pereira ( Portugal )</p> 
+              Association under Direct Instruction of Shihan Francisco Pereira( Portugal )</p> 
             
               <div class="row mt-4">
-               <!--<div class="col-xl-3 col-md-6 col-sm-12 mt-2 mb-2">
-                  <div class="card" style="height:25rem; border:none;">
-                    <img src="{% static 'img/team/h2.png' %}" class="card-img-top" alt="..."style="height:17rem; padding:10px;">
-                    <div class="card-body ">
-                      <h5 class="card-title">Sihan Francisco Pereira</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-                </div>--> 
+               
                 <div class="col-lg-6 col-md-6 col-sm-12 mt-1 mb-3">
                   <div class="card" style="height:100%; border:none;">
                     <!-- <video class=""  loop autoplay muted style="width:100%;"> -->
@@ -714,93 +707,7 @@ marquee a:hover{
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Kata</h2>
-          <p>Our Katas</p>
-        </div>
-
-        <div class="row" data-aos="fade-left">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
-              <a href="{% url 'load_kata' %}" > <img src="http://gojuryuokinawakan.com/images/katas/gekisai_ichi.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" srcset="https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 1x, https://static.wixstatic.com/media/453d1d_5f1ee2ea98084385a2569707c7d53474~mv2.gif 2x"></a>
-              <h3  class="mx-3"><a href="{% url 'load_kata' %}#kata1"style="color: #000;">Geki Sai Dai Ichi</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/gekisai_ni.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata2" style="color: #000;">Geki Sai Dai Ni</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/saifa.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata3" style="color: #000;">Saifa</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/sanchin.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata4" style="color: #000;">Sanchin</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/seiinchin.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata5" style="color: #000;">Seiyunchin</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/shisochin.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata6" style="color: #000;">Shisochin </a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/sanseiru.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata7" style="color: #000;">Sanseru </a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/seipai.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata8" style="color: #000;">Sepai</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="450">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/kururunfa.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata9" style="color: #000;">Kururunfa	</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
-              <a href="{% url 'load_kata' %}"> <img src="http://gojuryuokinawakan.com/images/katas/seisan.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3><a href="{% url 'load_kata' %}#kata10" style="color: #000;">Seisan </a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
-              <a href="{% url 'load_kata' %}#kata11"> <img src="http://gojuryuokinawakan.com/images/katas/suparinpei.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill"></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata11" style="color: #000;">Suparinpei </a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="600">
-              <a href="{% url 'load_kata' %}#kata12"> <img src="http://gojuryuokinawakan.com/images/katas/tensho.gif" alt="saifa.gif" style="width:6vh;height:8vh;object-fit:fill" ></a>
-              <h3 class="mx-3"><a href="{% url 'load_kata' %}#kata12" style="color: #000;">Tensho </a></h3>
-            </div>
-          </div>
-               
-        </div>
-
-      </div>
-    </section><!-- End Features Section -->
+    
 
     
     <!-- ======= Details Section 
@@ -897,39 +804,7 @@ marquee a:hover{
       </div>
     </section>End Details Section -->
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Gallery</h2>
-          <p> Events Gallery</p>
-        </div>
-
-        <div class="row no-gutters" data-aos="fade-left">
-          {% for folder in folders %}
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              {% if folder.folder_image_url %}
-              <a href="{{folder.folder_image_url.url}}" class="gallery-lightbox">
-                
-                <img src="{{folder.folder_image_url.url}}" alt="" class="img-fluid">
-                {% endif %}
-                <div id="event_name">
-                  <a href="{% url 'MoreEvent' folder.id %}"><h6>{{folder.folder_name}}</h6></a>
-                </div>
-              </a>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        <div id="morebtn">
-         <button type="button"><a href="{% url 'MoreEventall' %}">More Events</a></button> 
-        </div>
-        
-      </div>
-    </section><!-- End Gallery Section -->
+    
 
     <section>
       
@@ -1024,7 +899,7 @@ marquee a:hover{
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h3>Goju Ryu Okinawa </h3>
-              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Fransico Pereira ( Portugal )</em></p>
+              <p class="pb-3"><em>OKAI is a Goju Ryu Okinawa Karate Do Association under Direct Instruction of Shihan Francisco Pereira( Portugal )</em></p>
               <p>
                 Goju sensei, Mathapuram, Tholaiyavattam Post, 
                  <br>
@@ -1054,9 +929,9 @@ marquee a:hover{
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'About_karate' %}">History of Goju ryu</a></li>
               
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_member' %}">Associate Members</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#gallery">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#features">Katas</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about1">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_gallery' %}#gallery">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_katts' %}#features">Katas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index_load' %}#about1">About Us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'load_affiliation' %}">Affiliaton</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact Us</a></li>
             </ul>
